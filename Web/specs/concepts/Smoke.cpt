@@ -2,8 +2,9 @@ Created by BUckus on 6/1/2022
 
 This is a concept file with following syntax for each concept.
 # Open Test environment
-* Wait "10" seconds
-* Wait for element then click "gotItButton"
+* Wait "5" seconds
+//* Wait for element then click "gotItButton"
+//* Find element text equals "JOIN" and click
 * Check if element "registerButton" exists
 * Check if element "loginButton" exists
 
@@ -11,9 +12,9 @@ This is a concept file with following syntax for each concept.
 * Click to element "loginButton"
 * Wait "1" seconds
 * Click to element "loginUserNameArea"
-* Write value "iqra.manzoor@ligastavok.ru" to element "loginUserNameArea"
+* Write value "+5598765432111" to element "loginUserNameArea"
 * Click to element "loginPasswordArea"
-* Write value "123456789" to element "loginPasswordArea"
+* Write value "Qa123456" to element "loginPasswordArea"
 * Click to element "loginButtonArea"
 * Wait "2" seconds
 
@@ -33,29 +34,24 @@ This is a concept file with following syntax for each concept.
 * Click to element "registerButton"
 
 # Register New Account
+* Check if element "phoneNumberTextField" exists
+* Write random Int value to element "phoneNumberTextField"
+* Wait "5" seconds
+* Click to element "currency"
+* Click to element "currencyBRL"
+* Wait "5" seconds
+* Check if element "email" exists
+* Find element by "email" clear and send keys  random email
+* Wait "5" seconds
+* Check if element "firstNameInput" exists
+* Click to element "firstNameInput"
 * Write random Alpha value to element "firstNameInput" starting with "test"
 * Write random Alpha value to element "lastNameInput" starting with "testinium"
-* Click to element "hbd1"
-* Click to element "selectDate"
-* Click to element "hbd2"
-* Click to element "selectMonth"
-* Click to element "hbd3"
-* Click to element "selectYear"
-* Find element by "email" clear and send keys  random email
-* Write values "1q2w3e4r5t" to element "registerPassword"
-* Write values "1q2w3e4r5t" to element "registerPasswordRepeat"
-//* Pick the one of elements "phoneNumberZoneCode" randomly
-* Click to element "phoneNumberZoneCode"
+* Write value "08.12.1992" to element "dateOfBirth"
 * Wait "5" seconds
-* Click to element "zoneCode"
-* Click to element "phoneNumberTextField"
-* Write random Int value to element "phoneNumberTextField"
-* Click to element "nationality"
-//* Pick the one of elements "nationalityCountry" randomly
-* Click to element "nationalityCountry"
+* Write values "1q2w3e4r5t" to element "registerPassword"
 * Click to element "acceptCheckBox"
 * Click to element "registerNowButton"
-//* "welcomeLabel" elementi "WELCOME" değerini içeriyor mu kontrol et
 * Wait "10" seconds
 
 # Place Single Bet

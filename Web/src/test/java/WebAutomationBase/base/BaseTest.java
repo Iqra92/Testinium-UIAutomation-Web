@@ -43,7 +43,7 @@ public class BaseTest {
 
   public void setUp() throws Exception {
 
-    String baseUrl = "https://test.texsportbet.com/en-gb";
+    String baseUrl = "https://dev-gambling.ligabet.com/";
     String selectPlatform = "win";
     String selectBrowser = "chrome";
 

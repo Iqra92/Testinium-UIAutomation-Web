@@ -4,12 +4,12 @@ import WebAutomationBase.base.BaseTest;
 import WebAutomationBase.helper.ElementHelper;
 import WebAutomationBase.helper.StoreHelper;
 import WebAutomationBase.model.ElementInfo;
-import WebAutomationBase.step.helper.HelperUtils;
 import com.thoughtworks.gauge.Step;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.apache.commons.lang.RandomStringUtils;
 import org.apache.log4j.PropertyConfigurator;
+import org.assertj.core.api.Assertions;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -119,6 +119,17 @@ public class BaseSteps extends BaseTest {
     }
 
     return stringRandom;
+  }
+
+  public WebElement findElementWithAssertion(By by) {
+    WebElement element = null;
+    try {
+      element = findElement(String.valueOf(by));
+    } catch (Exception e) {
+      Assertions.fail(element.getAttribute("value") + " " + "by = %s Element not found ", by.toString());
+      e.printStackTrace();
+    }
+    return element;
   }
 
   @Step("Genarete random number for Withdrawal <key> and <keys>, and saved the number <saveKey>. And write the saved key to the <keyy> element")
@@ -264,7 +275,7 @@ public class BaseSteps extends BaseTest {
           "<int> saniye bekle"})
   public void waitBySeconds(int seconds) {
     try {
-      logger.info(seconds + " saniye bekleniyor.");
+      logger.info(seconds + " waiting for seconds.");
       Thread.sleep(seconds * 1000);
     } catch (InterruptedException e) {
       e.printStackTrace();
@@ -334,7 +345,7 @@ public class BaseSteps extends BaseTest {
     while (loopCount < DEFAULT_MAX_ITERATION_COUNT) {
       try {
         webElement = findElementWithKey(key);
-        logger.info(key + " elementi bulundu.");
+        logger.info(key + "element found.");
         return webElement;
       } catch (WebDriverException e) {
       }
@@ -343,6 +354,12 @@ public class BaseSteps extends BaseTest {
     }
     Assert.fail("Element: '" + key + "' doesn't exist.");
     return null;
+  }
+
+  @Step({"Değeri <text> e eşit olan elementli bul ve tıkla",
+          "Find element text equals <text> and click"})
+  public void clickByText(String text) {
+    findElementWithAssertion(By.xpath(".//*[contains(@text,'" + text + "')]")).click();
   }
 
   @Step({"Go to <url> address",
@@ -436,7 +453,7 @@ public class BaseSteps extends BaseTest {
   public void ssendKeys(String text, String key) {
     if (!key.equals("")) {
       findElement(key).sendKeys(text);
-      logger.info(key + " elementine " + text + " texti yazıldı.");
+      logger.info(key + " element " + text + " text has been written.");
     }
   }
 
@@ -453,6 +470,27 @@ public class BaseSteps extends BaseTest {
     findElement(key).sendKeys(startingText+ value);
     logger.info("The text was written to the field as: " + startingText + value);
   }
+
+  @Step({"Write date values  <text1> to element <key1>"})
+  public void birthDate( Integer text1, String key1) {
+    if (!key1.equals("")) {
+      findElement(key1).click();
+
+      List<WebElement> birthDay = findElements(key1);
+      System.out.println(birthDay.size());
+
+      for(int i = 0; i<=birthDay.size()-1; i++) {
+
+        if(birthDay.get(i).equals(text1)) {
+
+          birthDay.get(i).click();
+          break;
+
+        }
+
+      }
+    }
+}
 
   @Step({"Click with javascript to css <css>",
           "Javascript ile css tıkla <css>"})
@@ -633,7 +671,7 @@ public class BaseSteps extends BaseTest {
   public void checkElementContainsText(String key, String expectedText) {
     Boolean containsText = findElement(key).getText().contains(expectedText);
     assertTrue("Expected text is not contained", containsText);
-    logger.info(key + " elementi" + expectedText + "değerini içeriyor.");
+    logger.info(key + " elements" + expectedText + "contains the valuer.");
   }
 
   @Step({"Write random value to element <key>",

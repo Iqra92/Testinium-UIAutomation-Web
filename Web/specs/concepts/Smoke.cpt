@@ -70,8 +70,10 @@ This is a concept file with following syntax for each concept.
 * Elementine tıkla "betAcceptButton"
 
 # Open My account
-* "customerMenu" elementin üstünde bekle
-* Elementine tıkla "myAccount"
+//* "customerMenu" wait on element
+* Click to element "depositButton"
+* Wait "2" seconds
+
 
 # My Bets
 * Check if element "bettingHistory" exists
@@ -118,7 +120,7 @@ This is a concept file with following syntax for each concept.
 * Elementine tıkla "saveButton"
 
 # Logout
-* "customerMenu" elementin üstünde bekle
+* "customerMenu" wait on element
 * Elementine tıkla "logOut"
 
 # Old Password
@@ -139,7 +141,7 @@ This is a concept file with following syntax for each concept.
 * Click to element "loginButtonArea"
 
 # Open My Account Logged Account
-* "customerMenu" elementin üstünde bekle
+* "customerMenu" wait on element
 * "1" saniye bekle
 * Elementine tıkla "myAccount"
 
@@ -166,6 +168,11 @@ This is a concept file with following syntax for each concept.
 * Wait "10" seconds
 * Click to element "oddValueChangesSave"
 
+# Choose to Payment Method
+* Check if element "depositPIXMethod" exists
+* Click to element "depositPIXMethod"
+//* Wait for element then click "depositPIXMethod"
+
 # Choose to Payment Method with <key>
 * Wait for element then click <key>
 
@@ -189,20 +196,26 @@ This is a concept file with following syntax for each concept.
 * Wait for element then click <key>
 
 
-# Genarete Random Deposit Value and Enter that value
-* Wait for element then click "transactionAmount"
+# Genarete Random PIX Deposit Value and Enter that value
+* Check if element "pixMinAmount" exists
+* Genarete random number for Deposit methods "pixMinAmount" and "pixHighAmount", and saved the number "randomNumber". And write the saved key to the "pixTransactionAmount" element
 * Wait "5" seconds
-* Genarete random number for Deposit "minAmount" and "highAmount", and saved the number "randomNumber". And write the saved key to the "transactionAmount" element
-//* Get Amount from list "getAmountFromList"
-Run below for hard code random number
-//* Genarete random number and saved the number "randomNumber". And write the saveKey to the "depositAmount" element
+
+# Genarete Random PicPay Deposit Value and Enter that value
+* Check if element "picpayMinAmount" exists
+* Genarete random number for Deposit methods "picpayMinAmount" and "picpayHighAmount", and saved the number "randomNumber". And write the saved key to the "picpayTransactionAmount" element
+* Wait "5" seconds
+
+# Genarete Random Binance Deposit Value and Enter that value
+* Check if element "binanceMinAmount" exists
+* Genarete random number for Deposit methods "binanceMinAmount" and "binanceHighAmount", and saved the number "randomNumber". And write the saved key to the "binanceTransactionAmount" element
 * Wait "5" seconds
 
 # Genarete Random Transaction Value and Enter The Value
 * Wait for element then click "transactionAmount"
 * Wait for element then click "blockAmount"
 * Wait "2" seconds
-* Genarete random number for Withdrawal "minAmountInAPSWithdrawal" and "payableAmountInAPSWithdrawal", and saved the number "randomNumber". And write the saved key to the "transactionAmount" element
+* Genarete random number for Deposit methods "minAmountInAPSWithdrawal" and "payableAmountInAPSWithdrawal", and saved the number "randomNumber". And write the saved key to the "transactionAmount" element
 * Wait "5" seconds
 
 # Genarete Random Transaction Value and Enter The Value For Monnet WithDrawal
@@ -240,13 +253,32 @@ Run below for hard code random number
 * Wait for element then click "continueBtnInWithdrawal"
 * Wait "5" seconds
 
-# Continue To Transaction For Deposit
-* Wait for element then click "continueBtnInWithDeposit"
-* Wait "5" seconds
+# Continue To Transaction For PIX Deposit
+* Wait for element then click "pixContinueBtnInWithDeposit"
+* Wait "10" seconds
+
+# Continue To Transaction For PicPay Deposit
+* Wait for element then click "picpayContinueBtnInWithDeposit"
+* Wait "10" seconds
+
+# Continue To Transaction For Binance Deposit
+* Wait for element then click "binanceContinueBtnInWithDeposit"
+* Wait "10" seconds
+
+# Enter Pagsmile Details
+* Write value "502.844.147-27" to element "IDCPF"
+* Wait "2" seconds
 
 # Click on Perform Payment
-* Wait for element then click "performPayment"
+* Click to element "performPayment"
 * Wait "5" seconds
+
+# Continue to Main Site and Go to transaction Page
+* Click to element "goBackToSite"
+* Wait "5" seconds
+* Click to element "transactionPage"
+* Wait "5" seconds
+
 
 # Compare the deposit amount <saveKey> to the value in payment method <saveKeyy> by replaced text <key>
 * Get text by <key> and replace the symbols than save the text <saveKeyy>
@@ -483,6 +515,16 @@ Run below for hard code random number
 
 # Calculate the balance
 * Caculate the balance after Withdrawal by "balanceInAccount" and "randomNumber" and save the value "savedBalance"
+
+# Enter Account Details
+* Write value "QA" to element "acctFirstName"
+* Write value "testing" to element "acctLastName"
+* Write value "502.844.147-27" to element "acctCPF"
+* Write value "QA@test.com" to element "acctEmail"
+* Write value "+5598765432111" to element "acctMobile"
+
+# Pay Amount
+* Click to element "acctSubmit"
 
 
 

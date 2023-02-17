@@ -132,7 +132,7 @@ public class BaseSteps extends BaseTest {
     return element;
   }
 
-  @Step("Genarete random number for Withdrawal <key> and <keys>, and saved the number <saveKey>. And write the saved key to the <keyy> element")
+  @Step("Genarete random number for Deposit methods <key> and <keys>, and saved the number <saveKey>. And write the saved key to the <keyy> element")
   public void picksave(String key, String keys, String saveKey, String keyy) throws Exception {
     int randomNumber = randomIntGenerateNumber(key, keys);
     //webElement.sendKeys(String.valueOf(randomNumber));
@@ -416,7 +416,7 @@ public class BaseSteps extends BaseTest {
     }
     Assert.fail(message);
   }
-  @Step("<key> elementin üstünde bekle")
+  @Step("<key> wait on element")
   public void hover(String key) {
     hoverElement(findElement(key));
   }
@@ -1155,28 +1155,30 @@ public class BaseSteps extends BaseTest {
     return value;
   }
 
+
   public int randomIntGenerateNumber(String key, String keys) throws Exception {
     WebElement low = findElement(key);
     WebElement high = findElement(keys);
-    String minValue = low.getText().replace("Min. amount: ","");
+    String lowValueWithoutspace = low.getText().replaceAll("\\s","");
+    logger.info("String low Value without spacing: " + lowValueWithoutspace);
+    String minValue = lowValueWithoutspace.replace("Min.","");
     logger.info("String Min Value: " + minValue);
-    String minValueWithoutComma = minValue.replace(",", "");
+    String minValueWithoutComma = minValue.replace("-max,", "");
     logger.info("String Min Value: " + minValueWithoutComma);
-    int minValueWithoutDecimal = convertDecimalStringValueToInt(minValueWithoutComma) ;
-    logger.info("String Current Value with Comma: " + minValueWithoutDecimal);
-    String highValueWithComma = high.getText().replaceAll("\\s","");
-    logger.info("String High Value with Comma: " + highValueWithComma);
-    String highValueWithoutCLP = high.getText().replace("CLP","");
-    logger.info("String High Value without CLP: " + highValueWithoutCLP);
-    String highValueWithoutComma = highValueWithoutCLP.replace(",", "");
-    logger.info("String High Value with Comma: " + highValueWithoutComma);
-    int maxValueWithoutDecimal = convertDecimalStringValueToInt(highValueWithoutComma);
-    logger.info("String Current Value with Comma: " + maxValueWithoutDecimal);
-
+    String minValueWithoutChar = minValueWithoutComma.replace("7283BRL", "");
+    logger.info("String Minimum Value is: " + minValueWithoutChar);
+    String highValueWithoutspace = high.getText().replaceAll("\\s","");
+    logger.info("String High Value without spacing: " + highValueWithoutspace);
+    String highValue = highValueWithoutspace.replace("Min.","");
+    logger.info("String High Value : " + highValue);
+    String highValueWithoutComma = highValue.replace("8-max,", "");
+    logger.info("String High Value without comma " + highValueWithoutComma);
+    String maxValueWithoutChar = highValueWithoutComma.replace("BRL", "");
+    logger.info("String Maximum Value is" + maxValueWithoutChar);
 
     Random random = new Random();
-    if (maxValueWithoutDecimal>minValueWithoutDecimal){
-      int result = random.nextInt(maxValueWithoutDecimal-minValueWithoutDecimal) + minValueWithoutDecimal;
+    if (Integer.parseInt(maxValueWithoutChar) > Integer.parseInt(minValueWithoutChar)){
+      int result = random.nextInt((Integer.parseInt(maxValueWithoutChar) - Integer.parseInt(minValueWithoutChar)) + Integer.parseInt(minValueWithoutChar));
       logger.info("random number: " + result);
       return result;
     }

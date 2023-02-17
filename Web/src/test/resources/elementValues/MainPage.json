@@ -170,8 +170,8 @@
     "type": "xpath"
   },
   {
-    "key": "myAccount",
-    "value": "//a[@href='/en-gb/Account']",
+    "key": "depositButton",
+    "value": "/html[1]/body[1]/div[1]/div[1]/header[1]/div[1]/div[2]/button[1]",
     "type": "xpath"
   },
   {
@@ -250,7 +250,7 @@
     "type": "css"
   },
   {
-    "key": "depositButton",
+    "key": "depositButtons",
     "value": ".a-paymenthandlerlist-ph-image",
     "type": "css"
   },
@@ -427,12 +427,28 @@
     "value": "li[class='a-paymentlist-saldo-item blocked']",
     "type": "css"
   },
-  {"key": "minAmount",
-    "value": "//li[contains (text(), 'Min. amount: ')]",
+  {"key": "pixMinAmount",
+    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[2]/form[1]/div[1]/div[1]/div[1]/span[1]",
     "type": "xpath"
   },
-  {"key": "highAmount",
-    "value": "//li[contains (text(), 'Max. amount: ')]",
+  {"key": "pixHighAmount",
+    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[2]/form[1]/div[1]/div[1]/div[1]/span[1]",
+    "type": "xpath"
+  },
+  {"key": "picpayMinAmount",
+    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[3]/form[1]/div[1]/div[1]/div[1]/span[1]",
+    "type": "xpath"
+  },
+  {"key": "picpayHighAmount",
+    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[3]/form[1]/div[1]/div[1]/div[1]/span[1]",
+    "type": "xpath"
+  },
+  {"key": "binanceMinAmount",
+    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[4]/form[1]/div[1]/div[1]/div[1]/span[1]",
+    "type": "xpath"
+  },
+  {"key": "binanceHighAmount",
+    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[4]/form[1]/div[1]/div[1]/div[1]/span[1]",
     "type": "xpath"
   },
   {"key": "minAmountInAPSWithdrawal",
@@ -443,9 +459,17 @@
     "value": "//li[@class='a-paymentlist-saldo-item available']//b",
     "type": "xpath"
   },
-  {"key": "transactionAmount",
-    "value": "input[name='amount']",
-    "type": "css"
+  {"key": "pixTransactionAmount",
+    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[2]/form[1]/div[1]/div[1]/div[1]/div[1]/input[1][@name='amount']",
+    "type": "xpath"
+  },
+  {"key": "picpayTransactionAmount",
+    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[3]/form[1]/div[1]/div[1]/div[1]/div[1]/input[1]",
+    "type": "xpath"
+  },
+  {"key": "binanceTransactionAmount",
+    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[4]/form[1]/div[1]/div[1]/div[1]/div[1]/input[1]",
+    "type": "xpath"
   },
   {"key": "bankCodeInWithdrawalPage",
   "value": "//div[@class='a-form-wrapper a-form-wrapper_required'][2]//div[@class='a-dropdownbox-button']",
@@ -483,12 +507,28 @@
     "value": "input[class='a-btn-big']",
     "type": "css"
   },
-  {"key": "continueBtnInWithDeposit",
-    "value": "//*[@class='a-btn-big']",
+  {"key": "pixContinueBtnInWithDeposit",
+    "value": "//body/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[2]/form[1]/div[1]/button[1][contains(text(),'Proceed to payment')]",
+    "type": "xpath"
+  },
+  {"key": "picpayContinueBtnInWithDeposit",
+    "value": "//body/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[3]/form[1]/div[1]/button[1][contains(text(),'Proceed to payment')]",
+    "type": "xpath"
+  },
+  {"key": "binanceContinueBtnInWithDeposit",
+    "value": "//body/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[4]/form[1]/div[1]/button[1][contains(text(),'Proceed to payment')]",
     "type": "xpath"
   },
   {"key": "performPayment",
-    "value": "//*[@name='action:Execute']",
+    "value": "/html[1]/body[1]/div[1]/div[1]/div[5]/div[1]/div[2]/div[2]/button[1][contains(text(),'Confirm')]",
+    "type": "xpath"
+  },
+  {"key": "goBackToSite",
+    "value": "//a[contains(text(),'Back to shopping')]",
+    "type": "xpath"
+  },
+  {"key": "transactionPage",
+    "value": "/html[1]/body[1]/div[11]/div[1]/div[1]/section[1]/div[3]/span[2]/a[1][contains(text(),'soon')]",
     "type": "xpath"
   },
   {
@@ -700,8 +740,38 @@
   },
 
   {
-    "key": "depositAccentInMethod",
-    "value": "//a[@data-phsn='Accent In']",
+    "key": "depositPIXMethod",
+    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[1]/button[1]",
+    "type": "xpath"
+  },
+  {
+    "key": "depositPicPayMethod",
+    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[2]/button[1]",
+    "type": "xpath"
+  },
+  {
+    "key": "depositBinanceMethod",
+    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[3]/button[1]",
+    "type": "xpath"
+  },
+  {
+    "key": "depositBoletoMethod",
+    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[5]/button[1]",
+    "type": "xpath"
+  },
+  {
+    "key": "depositPagueNaLotericaMethod",
+    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[6]/button[1]",
+    "type": "xpath"
+  },
+  {
+    "key": "depositITAUMethod",
+    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[7]/button[1]",
+    "type": "xpath"
+  },
+  {
+    "key": "IDCPF",
+    "value": "//input[@id='inputform-taxid']",
     "type": "xpath"
   },
   {
@@ -913,6 +983,37 @@
     "key": "invalidValue",
     "value": "//span[@class='a-validate-form-value']",
     "type": "xpath"
+  },
+  {
+    "key": "acctFirstName",
+    "value": "//input[@id='from_first_name']",
+    "type": "xpath"
+  },
+  {
+    "key": "acctLastName",
+    "value": "//input[@id='from_last_name']",
+    "type": "xpath"
+  },
+  {
+    "key": "acctCPF",
+    "value": "//input[@id='from_id_details_cpf']",
+    "type": "xpath"
+  },
+  {
+    "key": "acctEmail",
+    "value": "//input[@id='from_email']",
+    "type": "xpath"
+  },
+  {
+    "key": "acctMobile",
+    "value": "//input[@id='from_mobile']",
+    "type": "xpath"
+  },
+  {
+    "key": "acctSubmit",
+    "value": "//button[@type='submit']",
+    "type": "xpath"
   }
+
 
 ]

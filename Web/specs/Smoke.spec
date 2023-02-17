@@ -71,7 +71,7 @@ Change Password
 * "password1" textini "loginPasswordArea" elemente tek tek yaz
 * Click to element "loginButtonArea"
 * "5" saniye bekle
-* "customerMenu" elementin üstünde bekle
+* "customerMenu" wait on element
 * "1" saniye bekle
 * Elementine tıkla "myAccount"
 * Elementine tıkla "changePass"
@@ -79,7 +79,7 @@ Change Password
 * "Password2" textini "newPass" elemente yaz
 * "Password2" textini "repeatNewPass" elemente yaz
 * Elementine tıkla "saveButton"
-* "customerMenu" elementin üstünde bekle
+* "customerMenu" wait on element
 * Elementine tıkla "logOut"
 * Click to element "loginButton"
 * "1" saniye bekle
@@ -89,7 +89,7 @@ Change Password
 * Click to element "loginPasswordArea"
 * "Password2" textini "loginPasswordArea" elemente tek tek yaz
 * Click to element "loginButtonArea"
-* "customerMenu" elementin üstünde bekle
+* "customerMenu" wait on element
 * "1" saniye bekle
 * Elementine tıkla "myAccount"
 * Elementine tıkla "changePass"
@@ -243,55 +243,50 @@ tags: Transaction
 * Complete the transaction
 * Compare the transactions numbers
 
-## Make Deposite With Accent In Method
-tags:makeDepositWithAccentInMethod
+## Make Deposite With PIX Method
+tags:makeDepositWithPIXMethod
 * Open Test environment
 * Login Account
 * Open My account
-* Transactions Deposit
-* Choose to Payment Method with "depositAccentInMethod"
-* Enter Amount
-//* Genarete Random Deposit Value and Enter that value
-* Continue To Transaction For Deposit
+* Choose to Payment Method with "depositPIXMethod"
+* Genarete Random PIX Deposit Value and Enter that value
+* Continue To Transaction For PIX Deposit
+* Enter Pagsmile Details
 * Click on Perform Payment
-* Enter Credit Card İnformation with "4242 4242 4242 4242", "Test Test" and "123"
-//* Enter Digipass Code with
+* Continue to Main Site and Go to transaction Page
+
 //* Verify the deposit information and continue the main site
 //* Go to Booking Page
 
-## Make Deposite With Apco Method
-tags:makeDepositWithApcoMethod
+## Make Deposite With PicPay Method
+tags:makeDepositWithPicPayMethod
 * Open Test environment
 * Login Account
 * Open My account
-* Transactions Deposit
-* Choose to Payment Method with "depositApcoMethod"
-* Enter Amount
-//* Genarete Random Deposit Value and Enter that value
-* Continue To Transaction For Deposit
-* Click on Perform Payment
-* Enter Credit Card İnformation with "4444444444442228", "Test Test" and "123" apco
-* Enter Digipass Code with
-* Verify the deposit information and continue the main site
+* Choose to Payment Method with "depositPicPayMethod"
+* Genarete Random PicPay Deposit Value and Enter that value
+* Continue To Transaction For PicPay Deposit
+* Enter Account Details
+* Pay Amount
+
+//* Enter Pagsmile Details
+//* Click on Perform Payment
+//* Continue to Main Site and Go to transaction Page
+
+//* Verify the deposit information and continue the main site
 //* Go to Booking Page
 
 
-## Make Deposite With Monnet Bank Transfer Method
-tags:makeDepositWithMonnetBankTransferMethod
+## Make Deposite With BINANCE Method
+tags:makeDepositWithBinanceMethod
 * Open Test environment
 * Login Account
 * Open My account
-* Transactions Deposit
-* Get list of payment method for selection "getListOfPaymentMethods"
-* Select Payment Method with "depositMonnetBank"
-//* Click on amount field "depositAmount"
-* Enter Amount
-//* Genarete Random Deposit Value and Enter that value
-* Select the Identity Type and Enter the Identity Number
-* Continue To Transaction For Deposit
-* Click on Perform Payment
-//* Compare the deposit amount "randomNumber" to the value in payment method "paymentValue" by replaced text "depositAmountInThirdPartForMonnetBankMethod"
-* Select the bank option for Bank Method
+* Choose to Payment Method with "depositBinanceMethod"
+* Genarete Random Binance Deposit Value and Enter that value
+* Continue To Transaction For Binance Deposit
+* Pay Amount
+
 
 
 
@@ -305,7 +300,7 @@ tags:makeDepositWithMonnetMethod
 * Enter Amount
 //* Genarete Random Deposit Value and Enter that value
 * Select the Identity Type and Enter the Identity Number
-* Continue To Transaction For Deposit
+* Continue To Transaction For PicPay Deposit
 * Click on Perform Payment
 * Select to the credit option for deposit method
 * Enter Credit Card İnformation with "4051 8856 0044 6623", "123" and "1224" monnet
@@ -323,7 +318,7 @@ tags:makeDepositWithMonnetDebitMethod
 * Enter Amount
 //* Genarete Random Deposit Value and Enter that value
 * Select the Identity Type and Enter the Identity Number
-* Continue To Transaction For Deposit
+* Continue To Transaction For PicPay Deposit
 * Click on Perform Payment
 //* Compare the deposit amount "randomNumber" to the value in payment method "paymentValue" by replaced text "depositAmountInThirdPartForMonnetDebitMethod"
 * Select to the "debitOptionForMonnet" option for deposit method
@@ -339,8 +334,8 @@ tags:makeDepositWithAPSBankTransferMethod
 * Transactions Deposit
 * Choose to Payment Method with "depositAPSBank"
 * Enter Amount
-* Genarete Random Deposit Value and Enter that value
-* Continue To Transaction For Deposit
+* Genarete Random PIX Deposit Value and Enter that value
+* Continue To Transaction For PicPay Deposit
 * Click on Perform Payment
 * Enter Bank Account Information "111111111" for APS
 * Click Back Trade And Redirect to website
@@ -356,7 +351,7 @@ tags:makeDepositWithAPSCardMethod
 * Choose to Payment Method with "depositAPSCard"
 * Enter Amount
 //* Genarete Random Deposit Value and Enter that value
-* Continue To Transaction For Deposit
+* Continue To Transaction For PicPay Deposit
 * Click on Perform Payment
 * Enter Bank Account Information "111111111" for APS
 * Select to the credit option for deposit method
@@ -374,7 +369,7 @@ tags:makeDepositWithAPSDebitMethod
 * Choose to Payment Method with "depositAPSCard"
 * Enter Amount
 //* Genarete Random Deposit Value and Enter that value
-* Continue To Transaction For Deposit
+* Continue To Transaction For PicPay Deposit
 * Click on Perform Payment
 * Enter Bank Account Information "111111111" for APS
 * Select to the "debitOptionForMonnet" option for deposit method

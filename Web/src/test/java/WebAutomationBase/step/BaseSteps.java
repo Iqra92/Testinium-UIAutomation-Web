@@ -132,9 +132,10 @@ public class BaseSteps extends BaseTest {
     return element;
   }
 
-  @Step("Genarete random number for Deposit methods <key> and <keys>, and saved the number <saveKey>. And write the saved key to the <keyy> element")
-  public void picksave(String key, String keys, String saveKey, String keyy) throws Exception {
-    int randomNumber = randomIntGenerateNumber(key, keys);
+  @Step("Genarete random number for Deposit methods <key> and saved the number <saveKey>. And write the saved key to the <keyy> element")
+  public void picksave(String amountValue,String saveKey, String keyy) throws Exception {
+    int randomNumber = generateRandomNumber(sliceNumber(amountValue ,true),
+     sliceNumber(amountValue ,false));
     //webElement.sendKeys(String.valueOf(randomNumber));
     StoreHelper.INSTANCE.saveValue(saveKey, String.valueOf(randomNumber));
     logger.info("saveKey for genareted random number: " + saveKey);
@@ -1154,6 +1155,50 @@ public class BaseSteps extends BaseTest {
     }
     return value;
   }
+
+
+  public String sliceNumber(String amountValue, boolean isMin) throws Exception {
+    WebElement getValue = findElement(amountValue);
+    String amountdata = getValue.getText();
+    String spliter = String.valueOf(amountdata);
+    String[] sliceString = spliter.split("-");
+    String min = sliceString[0];
+    String max = sliceString[1];
+    logger.info("m value1 = " + "" + min);
+    logger.info("m value1 = " + "" + max);
+
+
+    String mimNumberOnly= min.replaceAll("[^0-9]", "");
+    logger.info("Minimum Value is: "+""+mimNumberOnly);
+    String maxNumberOnly= max.replaceAll("[^0-9]", "");
+    logger.info("Maximum Value is: "+""+maxNumberOnly);
+
+    if (isMin){
+      return mimNumberOnly;
+    }
+    else
+      return maxNumberOnly;
+
+  }
+
+  public int generateRandomNumber(String min, String max) throws Exception {
+
+    Random random = new Random();
+    if (Integer.parseInt(max) > Integer.parseInt(min)){
+      int result = random.nextInt((Integer.parseInt(max) - Integer.parseInt(min)) + Integer.parseInt(min));
+      logger.info("random number: " + result);
+      return result;
+    }
+    else{
+      throw new Exception("There isn't enough balance in account");
+    }
+  }
+
+
+
+
+
+
 
 
   public int randomIntGenerateNumber(String key, String keys) throws Exception {

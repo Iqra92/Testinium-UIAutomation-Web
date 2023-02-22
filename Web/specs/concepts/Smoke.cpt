@@ -198,24 +198,34 @@ This is a concept file with following syntax for each concept.
 
 # Genarete Random PIX Deposit Value and Enter that value
 * Check if element "pixMinAmount" exists
-* Genarete random number for Deposit methods "pixMinAmount" and "pixHighAmount", and saved the number "randomNumber". And write the saved key to the "pixTransactionAmount" element
+* Genarete random number for Deposit methods "pixMinAmount" and saved the number "randomNumber". And write the saved key to the "pixTransactionAmount" element
 * Wait "5" seconds
 
-# Genarete Random PicPay Deposit Value and Enter that value
-* Check if element "picpayMinAmount" exists
-* Genarete random number for Deposit methods "picpayMinAmount" and "picpayHighAmount", and saved the number "randomNumber". And write the saved key to the "picpayTransactionAmount" element
+# Genarete Random Boleto Deposit Value and Enter that value
+* Check if element "boletoMinAmount" exists
+* Genarete random number for Deposit methods "boletoMinAmount" and saved the number "randomNumber". And write the saved key to the "boletoTransactionAmount" element
+* Wait "5" seconds
+
+# Genarete Random ITAU Deposit Value and Enter that value
+* Check if element "itauMinAmount" exists
+* Genarete random number for Deposit methods "itauMinAmount" and saved the number "randomNumber". And write the saved key to the "itauTransactionAmount" element
 * Wait "5" seconds
 
 # Genarete Random Binance Deposit Value and Enter that value
 * Check if element "binanceMinAmount" exists
-* Genarete random number for Deposit methods "binanceMinAmount" and "binanceHighAmount", and saved the number "randomNumber". And write the saved key to the "binanceTransactionAmount" element
+* Genarete random number for Deposit methods "binanceMinAmount" and saved the number "randomNumber". And write the saved key to the "binanceTransactionAmount" element
+* Wait "5" seconds
+
+# Genarete Random PagueNaLoterica Deposit Value and Enter that value
+* Check if element "pagueNaLotericaMinAmount" exists
+* Genarete random number for Deposit methods "pagueNaLotericaMinAmount" and saved the number "randomNumber". And write the saved key to the "pagueNaLotericaTransactionAmount" element
 * Wait "5" seconds
 
 # Genarete Random Transaction Value and Enter The Value
 * Wait for element then click "transactionAmount"
 * Wait for element then click "blockAmount"
 * Wait "2" seconds
-* Genarete random number for Deposit methods "minAmountInAPSWithdrawal" and "payableAmountInAPSWithdrawal", and saved the number "randomNumber". And write the saved key to the "transactionAmount" element
+* Genarete random number for Deposit methods "minAmountInAPSWithdrawal" and saved the number "randomNumber". And write the saved key to the "transactionAmount" element
 * Wait "5" seconds
 
 # Genarete Random Transaction Value and Enter The Value For Monnet WithDrawal
@@ -257,12 +267,20 @@ This is a concept file with following syntax for each concept.
 * Wait for element then click "pixContinueBtnInWithDeposit"
 * Wait "10" seconds
 
-# Continue To Transaction For PicPay Deposit
-* Wait for element then click "picpayContinueBtnInWithDeposit"
+# Continue To Transaction For Boleto Deposit
+* Wait for element then click "boletoContinueBtnInWithDeposit"
+* Wait "10" seconds
+
+# Continue To Transaction For ITAU Deposit
+* Wait for element then click "itauContinueBtnInWithDeposit"
 * Wait "10" seconds
 
 # Continue To Transaction For Binance Deposit
 * Wait for element then click "binanceContinueBtnInWithDeposit"
+* Wait "10" seconds
+
+# Continue To Transaction For PagueNaLoterica Deposit
+* Wait for element then click "pagueNaLotericaContinueBtnInWithDeposit"
 * Wait "10" seconds
 
 # Enter Pagsmile Details

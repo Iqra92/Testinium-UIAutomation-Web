@@ -258,24 +258,31 @@ tags:makeDepositWithPIXMethod
 //* Verify the deposit information and continue the main site
 //* Go to Booking Page
 
-## Make Deposite With PicPay Method
-tags:makeDepositWithPicPayMethod
+## Make Deposite With Boleto Method
+tags:makeDepositWithBoletoMethod
 * Open Test environment
 * Login Account
 * Open My account
-* Choose to Payment Method with "depositPicPayMethod"
-* Genarete Random PicPay Deposit Value and Enter that value
-* Continue To Transaction For PicPay Deposit
-* Enter Account Details
-* Pay Amount
+* Choose to Payment Method with "depositBoletoMethod"
+* Genarete Random Boleto Deposit Value and Enter that value
+* Continue To Transaction For Boleto Deposit
+* Enter Pagsmile Details
+* Click on Perform Payment
+* Continue to Main Site and Go to transaction Page
+//* Enter Account Details
+//* Pay Amount
 
-//* Enter Pagsmile Details
-//* Click on Perform Payment
-//* Continue to Main Site and Go to transaction Page
-
-//* Verify the deposit information and continue the main site
-//* Go to Booking Page
-
+## Make Deposite With ITAU Method
+tags:makeDepositWithItauMethod
+* Open Test environment
+* Login Account
+* Open My account
+* Choose to Payment Method with "depositITAUMethod"
+* Genarete Random ITAU Deposit Value and Enter that value
+* Continue To Transaction For ITAU Deposit
+* Enter Pagsmile Details
+* Click on Perform Payment
+* Continue to Main Site and Go to transaction Page
 
 ## Make Deposite With BINANCE Method
 tags:makeDepositWithBinanceMethod
@@ -287,95 +294,18 @@ tags:makeDepositWithBinanceMethod
 * Continue To Transaction For Binance Deposit
 * Pay Amount
 
-
-
-
-## Make Deposite With Monnet Card Method
-tags:makeDepositWithMonnetMethod
+## Make Deposite With PagueNaLoterica Method
+tags:makeDepositWithPagueNaLotericaMethod
 * Open Test environment
 * Login Account
 * Open My account
-* Transactions Deposit
-* Choose to Payment Method with "monnetCardMethod"
-* Enter Amount
-//* Genarete Random Deposit Value and Enter that value
-* Select the Identity Type and Enter the Identity Number
-* Continue To Transaction For PicPay Deposit
+* Choose to Payment Method with "depositPagueNaLotericaMethod"
+* Genarete Random PagueNaLoterica Deposit Value and Enter that value
+* Continue To Transaction For PagueNaLoterica Deposit
+* Enter Pagsmile Details
 * Click on Perform Payment
-* Select to the credit option for deposit method
-* Enter Credit Card İnformation with "4051 8856 0044 6623", "123" and "1224" monnet
-//* Select to the installment option
-* Enter Rut and Clave info at Welcome of TransBank page
-* Accept the option on TransBank page to be done the payment
+* Continue to Main Site and Go to transaction Page
 
-## Make Deposite With Monnet Debit Method
-tags:makeDepositWithMonnetDebitMethod
-* Open Test environment
-* Login Account
-* Open My account
-* Transactions Deposit
-* Choose to Payment Method with "monnetCardMethod"
-* Enter Amount
-//* Genarete Random Deposit Value and Enter that value
-* Select the Identity Type and Enter the Identity Number
-* Continue To Transaction For PicPay Deposit
-* Click on Perform Payment
-//* Compare the deposit amount "randomNumber" to the value in payment method "paymentValue" by replaced text "depositAmountInThirdPartForMonnetDebitMethod"
-* Select to the "debitOptionForMonnet" option for deposit method
-* Select the bank option and enter bank card info "4051 8856 0044 6623" for debit
-* Enter Rut and Clave info at Welcome of TransBank page
-* Accept the option on TransBank page to be done the payment
-
-## Make Deposite With APS Bank Transfer Method
-tags:makeDepositWithAPSBankTransferMethod
-* Open Test environment
-* Login Account
-* Open My account
-* Transactions Deposit
-* Choose to Payment Method with "depositAPSBank"
-* Enter Amount
-* Genarete Random PIX Deposit Value and Enter that value
-* Continue To Transaction For PicPay Deposit
-* Click on Perform Payment
-* Enter Bank Account Information "111111111" for APS
-* Click Back Trade And Redirect to website
-//* Select the bank option for Bank Method
-
-
-## Make Deposite With APS Card Method
-tags:makeDepositWithAPSCardMethod
-* Open Test environment
-* Login Account
-* Open My account
-* Transactions Deposit
-* Choose to Payment Method with "depositAPSCard"
-* Enter Amount
-//* Genarete Random Deposit Value and Enter that value
-* Continue To Transaction For PicPay Deposit
-* Click on Perform Payment
-* Enter Bank Account Information "111111111" for APS
-* Select to the credit option for deposit method
-* Enter Credit Card İnformation with "4051 8856 0044 6623", "123" and "1224" APS
-* Enter Rut and Clave info at Welcome of TransBank page
-* Accept the option on TransBank page to be done the payment
-
-
-## Make Deposite With APS Debit Method
-tags:makeDepositWithAPSDebitMethod
-* Open Test environment
-* Login Account
-* Open My account
-* Transactions Deposit
-* Choose to Payment Method with "depositAPSCard"
-* Enter Amount
-//* Genarete Random Deposit Value and Enter that value
-* Continue To Transaction For PicPay Deposit
-* Click on Perform Payment
-* Enter Bank Account Information "111111111" for APS
-* Select to the "debitOptionForMonnet" option for deposit method
-* Select the bank option and enter bank card info "4051 8856 0044 6623" for APS debit
-* Enter Rut and Clave info at Welcome of TransBank page
-* Accept the option on TransBank page to be done the payment
 
 
 

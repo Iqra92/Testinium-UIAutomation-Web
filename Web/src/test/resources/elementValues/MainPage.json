@@ -428,27 +428,43 @@
     "type": "css"
   },
   {"key": "pixMinAmount",
-    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[2]/form[1]/div[1]/div[1]/div[1]/span[1]",
+    "value": "//body/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[2]/form[1]/div[1]/div[1]/div[1]/span[1]",
     "type": "xpath"
   },
   {"key": "pixHighAmount",
     "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[2]/form[1]/div[1]/div[1]/div[1]/span[1]",
     "type": "xpath"
   },
-  {"key": "picpayMinAmount",
+  {"key": "boletoMinAmount",
     "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[3]/form[1]/div[1]/div[1]/div[1]/span[1]",
     "type": "xpath"
   },
-  {"key": "picpayHighAmount",
+  {"key": "boletoHighAmount",
     "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[3]/form[1]/div[1]/div[1]/div[1]/span[1]",
     "type": "xpath"
   },
   {"key": "binanceMinAmount",
-    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[4]/form[1]/div[1]/div[1]/div[1]/span[1]",
+    "value": "//body/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[5]/form[1]/div[1]/div[1]/div[1]/span[1]",
     "type": "xpath"
   },
   {"key": "binanceHighAmount",
+    "value": "//body/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[5]/form[1]/div[1]/div[1]/div[1]/span[1]",
+    "type": "xpath"
+  },
+  {"key": "itauMinAmount",
     "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[4]/form[1]/div[1]/div[1]/div[1]/span[1]",
+    "type": "xpath"
+  },
+  {"key": "itauHighAmount",
+    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[4]/form[1]/div[1]/div[1]/div[1]/span[1]",
+    "type": "xpath"
+  },
+  {"key": "pagueNaLotericaMinAmount",
+    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[6]/form[1]/div[1]/div[1]/div[1]/span[1]",
+    "type": "xpath"
+  },
+  {"key": "pagueNaLotericaHighAmount",
+    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[6]/form[1]/div[1]/div[1]/div[1]/span[1]",
     "type": "xpath"
   },
   {"key": "minAmountInAPSWithdrawal",
@@ -463,12 +479,16 @@
     "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[2]/form[1]/div[1]/div[1]/div[1]/div[1]/input[1][@name='amount']",
     "type": "xpath"
   },
-  {"key": "picpayTransactionAmount",
+  {"key": "boletoTransactionAmount",
     "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[3]/form[1]/div[1]/div[1]/div[1]/div[1]/input[1]",
     "type": "xpath"
   },
   {"key": "binanceTransactionAmount",
-    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[4]/form[1]/div[1]/div[1]/div[1]/div[1]/input[1]",
+    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[5]/form[1]/div[1]/div[1]/div[1]/div[1]/input[1]",
+    "type": "xpath"
+  },
+  {"key": "pagueNaLotericaTransactionAmount",
+    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[6]/form[1]/div[1]/div[1]/div[1]/div[1]/input[1]",
     "type": "xpath"
   },
   {"key": "bankCodeInWithdrawalPage",
@@ -511,11 +531,19 @@
     "value": "//body/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[2]/form[1]/div[1]/button[1][contains(text(),'Proceed to payment')]",
     "type": "xpath"
   },
-  {"key": "picpayContinueBtnInWithDeposit",
+  {"key": "boletoContinueBtnInWithDeposit",
     "value": "//body/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[3]/form[1]/div[1]/button[1][contains(text(),'Proceed to payment')]",
     "type": "xpath"
   },
   {"key": "binanceContinueBtnInWithDeposit",
+    "value": "//body/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[5]/form[1]/div[1]/button[1][contains(text(),'Proceed to payment')]",
+    "type": "xpath"
+  },
+  {"key": "pagueNaLotericaContinueBtnInWithDeposit",
+    "value": "//body/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[6]/form[1]/div[1]/button[1][contains(text(),'Proceed to payment')]",
+    "type": "xpath"
+  },
+  {"key": "itauContinueBtnInWithDeposit",
     "value": "//body/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[4]/form[1]/div[1]/button[1][contains(text(),'Proceed to payment')]",
     "type": "xpath"
   },
@@ -745,13 +773,13 @@
     "type": "xpath"
   },
   {
-    "key": "depositPicPayMethod",
+    "key": "depositBoletoMethod",
     "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[2]/button[1]",
     "type": "xpath"
   },
   {
     "key": "depositBinanceMethod",
-    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[3]/button[1]",
+    "value": "//body/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[4]/button[1]",
     "type": "xpath"
   },
   {
@@ -761,12 +789,12 @@
   },
   {
     "key": "depositPagueNaLotericaMethod",
-    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[6]/button[1]",
+    "value": "//body/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[5]/button[1]",
     "type": "xpath"
   },
   {
     "key": "depositITAUMethod",
-    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[7]/button[1]",
+    "value": "//body/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[3]/button[1]",
     "type": "xpath"
   },
   {

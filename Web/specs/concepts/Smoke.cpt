@@ -7,6 +7,7 @@ This is a concept file with following syntax for each concept.
 //* Find element text equals "JOIN" and click
 * Check if element "registerButton" exists
 * Check if element "loginButton" exists
+* Wait "5" seconds
 
 # Login Account
 * Click to element "loginButton"
@@ -168,6 +169,9 @@ This is a concept file with following syntax for each concept.
 * Wait "10" seconds
 * Click to element "oddValueChangesSave"
 
+# Open Withdrawal
+* Wait for element then click "selectWithdrawal"
+
 # Choose to Payment Method
 * Check if element "depositPIXMethod" exists
 * Click to element "depositPIXMethod"
@@ -195,6 +199,10 @@ This is a concept file with following syntax for each concept.
 # Click on amount field <key>
 * Wait for element then click <key>
 
+# Genarete Random Withdrawal Value and Enter that value
+* Check if element "MinAmountWithdrawal" exists
+* Genarete random number for Deposit methods "MinAmountWithdrawal" and saved the number "randomNumber". And write the saved key to the "transactionAmountWithdrawal" element
+* Wait "5" seconds
 
 # Genarete Random PIX Deposit Value and Enter that value
 * Check if element "pixMinAmount" exists
@@ -228,40 +236,48 @@ This is a concept file with following syntax for each concept.
 * Genarete random number for Deposit methods "minAmountInAPSWithdrawal" and saved the number "randomNumber". And write the saved key to the "transactionAmount" element
 * Wait "5" seconds
 
-# Genarete Random Transaction Value and Enter The Value For Monnet WithDrawal
-* Wait for element then click "transactionAmount"
-//* Wait for element then click "blockAmount"
+# Select the Key Type and Enter the Key Number
+* Wait for element then click "identityKeyTypeInWithdrawal"
 * Wait "2" seconds
-* Generate Monnet WithDrawal Random Number "minAmount" and "highAmount",and saved the number "randomNumber". And write the saved key to the "transactionAmount" element
-* Wait "5" seconds
+* Pick the one of elements "listOfKeyTypeInWithdrawal" randomly then Write identity keys For Conditions "keyNumber"
+* Wait "2" seconds
 
 # Select the Identity Type and Enter the Identity Number
-* Wait for element then click "identityTypeInDepositPage"
-* Wait "2" seconds
-* Pick the one of elements "listOfIdentityTypeInDepositPage" randomly excluding first option
-* Write value "111111111" to element "identityNumber"
-
-# Select the Bank Type and Enter the Account Number
-* Wait for element then click "bankCodeInWithdrawalPage"
-* Wait "2" seconds
-* Pick the one of elements "listOfBankCodeInWithdrawalPage" randomly excluding first option
-* Write value "4051885600446623" to element "bankAccountNumber"
-
-# Select the Identity Type and Enter the Account Number
 * Wait for element then click "identityTypeInWithdrawalPage"
 * Wait "2" seconds
-* Pick the one of elements "listOfIdentityTypeInWithdrawalPage" randomly excluding first option
-* Write value "111111111" to element "identityNumber"
+* Pick the one of elements "listOfIdentityTypeInWithdrawalPage" randomly then Write identity keys For Conditions "identityNumber"
+//* Write value "111111111" to element "identityNumber"
 
-# Select the Identity Type and Enter the Identity Number For Monnet
+#  Select the Bank Name and Enter the Bank Branch
 * Wait for element then click "identityTypeInWithdrawalPage"
 * Wait "2" seconds
-* Pick the one of elements "listOfIdentityTypeInWithdrawalPage" randomly excluding first option For Condition and write identity number "identityNumber"
+* Pick the one of elements "listOfIdentityTypeInWithdrawalPage" randomly then Write identity keys For Conditions "identityNumber"
+* Write value "1234" to element "bTIdentityNumber"
+
+# Select the BT Identity Type and Enter the Identity Number
+* Wait for element then click "bTidentityTypeInWithdrawal"
+* Wait "2" seconds
+* Pick the one of elements "listOfbTidentityTypeInWithdrawal" randomly then Write identity keys For Conditions "bTIdentityNumber"
+
+
+# Select Account Type and Enter Account Number and Account Digit
+* Wait for element then click "bTAccountTypeInWithdrawal"
+* Pick the one of elements "listOfbTAccountTypeInWithdrawal" randomly then Write identity keys For Conditions "accountNumber"
+* Click to element "accountDigitsr"
+* Write value "1" to element "accountDigitsr"
+
+# Enter Account Number For Crypto
+* Click to element "accountNumberCrypto"
+* Write value "98765432176" to element "accountNumberCrypto"
 
 # Continue To Transaction
 * Wait "2" seconds
 * Wait for element then click "continueBtnInWithdrawal"
 * Wait "5" seconds
+
+# Verification For Transaction Succesfully
+* Verification From Text "successfullyWithdrawal"
+
 
 # Continue To Transaction For PIX Deposit
 * Wait for element then click "pixContinueBtnInWithDeposit"

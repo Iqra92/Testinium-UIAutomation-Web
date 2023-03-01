@@ -92,8 +92,9 @@ public class BaseSteps extends BaseTest {
 
   }
 
-  private boolean isDisplayed(WebElement element) {
-    return element.isDisplayed();
+  private boolean isDisplayed(String element) {
+
+    return driver.findElement(By.xpath(element)).isDisplayed();
   }
 
   private boolean isDisplayedBy(By by) {
@@ -130,6 +131,18 @@ public class BaseSteps extends BaseTest {
       e.printStackTrace();
     }
     return element;
+  }
+  @Step("Verification From Text <key>")
+  public void getTextVerification(String key){
+    findElement(key).getText();
+    logger.info(findElement(key).getText());
+
+    if (isDisplayedBy(By.xpath("//div[contains(text(),'Withdrawal request has been processed successfully')]"))){
+      logger.info("Test Pass");
+    }
+    else {
+      logger.info("Test Failed - Transaction not successfully");
+    }
   }
 
   @Step("Genarete random number for Deposit methods <key> and saved the number <saveKey>. And write the saved key to the <keyy> element")
@@ -1126,6 +1139,7 @@ public class BaseSteps extends BaseTest {
     drpCountry.selectByVisibleText(text);
   }
 
+
   @Step("Batuhan testinium")
   public void batuhanTestinium() throws InterruptedException {
     Thread.sleep(1000);
@@ -1154,6 +1168,62 @@ public class BaseSteps extends BaseTest {
       elements.get(index).click();
     }
     return value;
+  }
+
+  @Step({"Pick the one of elements <keys> randomly then Write identity keys For Conditions <keys>"})
+  public void writeValueForCondintion(String keyType, String num) {
+    List<WebElement> elements = findElements(keyType); //Get all options
+    int index = 0; //if list contains only one element it will take that element
+    Random rand = new Random();
+    index = rand.nextInt(elements.size() - 1);
+    String value = elements.get(index).getText();
+    logger.info("Switch value : "+""+value);
+    waitBySeconds(5);
+
+    switch (value) {
+      case IDENTITY_TYPE:
+        elements.get(index).click();
+       clickElement(num);
+        ssendKeys(IDENTITY_NUMBER,num);
+//        findElement(num).sendKeys(IDENTITY_NUMBER);
+        logger.info("' text is written to the '" + IDENTITY_NUMBER + "' element.");
+        break;
+      case PHONE:
+        elements.get(index).click();
+        clickElement(num);
+        ssendKeys(PHONE_NUMBER,num);
+   //     findElement(num).sendKeys(PHONE_NUMBER);
+        logger.info("' text is written to the '" + PHONE_NUMBER + "' element.");
+        break;
+      case EMAIL:
+        elements.get(index).click();
+        clickElement(num);
+        ssendKeys(EMAIL_ADDRESS,num);
+   //     findElement(num).sendKeys(EMAIL_ADDRESS);
+        logger.info("' text is written to the '" + EMAIL_ADDRESS + "' element.");
+        break;
+      case SAVINGS:
+        elements.get(index).click();
+        clickElement(num);
+        ssendKeys(ACCOUNT_NUMBER_SAVINGS,num);
+        //     findElement(num).sendKeys(EMAIL_ADDRESS);
+        logger.info("' text is written to the '" + ACCOUNT_NUMBER_SAVINGS + "' element.");
+        break;
+      case CHECKING:
+        elements.get(index).click();
+        clickElement(num);
+        ssendKeys(ACCOUNT_NUMBER_CHECKING,num);
+        //     findElement(num).sendKeys(EMAIL_ADDRESS);
+        logger.info("' text is written to the '" + ACCOUNT_NUMBER_CHECKING + "' element.");
+        break;
+      default:
+        elements.get(index).click();
+        clickElement(num);
+        ssendKeys(IDENTITY_OTHER_NUMBER,num);
+   //     findElement(num).sendKeys(IDENTITY_OTHER_NUMBER);
+        logger.info("' text is written to the '" + IDENTITY_OTHER_NUMBER + "' element.");
+        break;
+    }
   }
 
 
@@ -1399,11 +1469,11 @@ public class BaseSteps extends BaseTest {
 
   }
 
-  @Step({"Pick the one of elements <keys> randomly excluding first option For Condition and write identity number <keys>"})
+  @Step({"Pick the one of elements <keys> randomly For Condition and write identity number <keys>"})
   public void pickTheElementRandomExcludingFirstOptionForCondition(String type, String num) {
     List<WebElement> elements = findElements(type); //Get all options
     Random randomOption = new Random();
-    int startOption = 1; //assuming "--your choice--" is index "0"
+    int startOption = 0; //assuming "--your choice--" is index "0"
     int endOption = elements.size(); // end of range
     int number = startOption + randomOption .nextInt( endOption - startOption);
     String value = elements.get(number).getText();

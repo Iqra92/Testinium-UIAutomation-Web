@@ -175,55 +175,46 @@ tags: Transaction
 * Open Bet Settings
 * Change Odd Value Changes
 
-## Make Withdrawal With APS Method
+## Make Withdrawal With PIX Out Method
 * Open Test environment
 * Login Account
 * Open My account
-* Transactions Withdrawal
-* Choose to Payment Method with "apsWithdrawalMethods"
-* Genarete Random Transaction Value and Enter The Value
-* Select the Bank Type and Enter the Account Number
-* Select the Identity Type and Enter the Account Number
+* Open Withdrawal
+* Choose to Payment Method with "pixInWithdrawalMethod"
+* Genarete Random Withdrawal Value and Enter that value
+* Select the Key Type and Enter the Key Number
+* Select the Identity Type and Enter the Identity Number
 * Continue To Transaction
-* Compare the entered withdrawal amount "randomNumber" to amount "requestedAmountInWithdrawalPage" which inside the transactions info by converted text "requestedWithdraw"
-//* Calculate the balance
-* Get Transaction Number In Withdrawal Page
-* Complete the transaction
-* Compare the transactions numbers
-
-## Make Withdrawal With Monnet Bank Out Method
-* Open Test environment
-* Login Account to Equador country
-* Open My account
-* Transactions Withdrawal
-* Choose to Payment Method with "monnetBankOutWithdrawalMethods"
-* Enter Amount For Dollar
-//* Genarete Random Transaction Value and Enter The Value For Monnet WithDrawal
-* Select the Bank Type and Enter the Account Number
-* Select the Identity Type and Enter the Identity Number For Monnet
-* Continue To Transaction
+* Verification For Transaction Succesfully
 //* Compare the entered withdrawal amount "randomNumber" to amount "requestedAmountInWithdrawalPage" which inside the transactions info by converted text "requestedWithdraw"
-* Get Transaction Number In Withdrawal Page
-* Complete the transaction
-* Compare the transactions numbers
+////* Calculate the balance
+//* Get Transaction Number In Withdrawal Page
+//* Complete the transaction
+//* Compare the transactions numbers
 
-## Make Withdrawal With Apco Method
+## Make Withdrawal With Bank Transfer Method
 * Open Test environment
 * Login Account
 * Open My account
-* Transactions Withdrawal
-* Choose to Payment Method with "apcoWithdrawalMethod"
-* Enter Amount
-//* Genarete Random Transaction Value and Enter The Value
-* Select the Card and Enter the Missing Number
-* Select the Card Expiration Date For Month
-* Select the Card Expiration Date For Year
+* Open Withdrawal
+* Choose to Payment Method with "bankTransferInWithdrawalMethod"
+* Genarete Random Withdrawal Value and Enter that value
+* Select the BT Identity Type and Enter the Identity Number
+* Select the Bank Name and Enter the Bank Branch
+* Select Account Type and Enter Account Number and Account Digit
 * Continue To Transaction
-//* Compare the entered withdrawal amount "randomNumber" to amount "requestedAmountInWithdrawalPage" which inside the transactions info by converted text "requestedWithdraw"
-//* Calculate the balance
-* Get Transaction Number In Withdrawal Page
-* Complete the transaction
-* Compare the transactions numbers
+* Verification For Transaction Succesfully
+
+## Make Withdrawal With Crypto Out Method
+* Open Test environment
+* Login Account
+* Open My account
+* Open Withdrawal
+* Choose to Payment Method with "cryptoOutInWithdrawalMethod"
+* Genarete Random Withdrawal Value and Enter that value
+* Enter Account Number For Crypto
+* Continue To Transaction
+* Verification For Transaction Succesfully
 
 ## Make Withdrawal With Accent Out Method
 * Open Test environment
@@ -243,7 +234,7 @@ tags: Transaction
 * Complete the transaction
 * Compare the transactions numbers
 
-## Make Deposite With PIX Method
+## Make Deposite With PIX In Method
 tags:makeDepositWithPIXMethod
 * Open Test environment
 * Login Account
@@ -258,7 +249,7 @@ tags:makeDepositWithPIXMethod
 //* Verify the deposit information and continue the main site
 //* Go to Booking Page
 
-## Make Deposite With Boleto Method
+## Make Deposite With Boleto In Method
 tags:makeDepositWithBoletoMethod
 * Open Test environment
 * Login Account
@@ -272,7 +263,7 @@ tags:makeDepositWithBoletoMethod
 //* Enter Account Details
 //* Pay Amount
 
-## Make Deposite With ITAU Method
+## Make Deposite With Express In Method
 tags:makeDepositWithItauMethod
 * Open Test environment
 * Login Account
@@ -284,7 +275,7 @@ tags:makeDepositWithItauMethod
 * Click on Perform Payment
 * Continue to Main Site and Go to transaction Page
 
-## Make Deposite With BINANCE Method
+## Make Deposite With Crypto In Method
 tags:makeDepositWithBinanceMethod
 * Open Test environment
 * Login Account
@@ -294,7 +285,7 @@ tags:makeDepositWithBinanceMethod
 * Continue To Transaction For Binance Deposit
 * Pay Amount
 
-## Make Deposite With PagueNaLoterica Method
+## Make Deposite With Lottery In Method
 tags:makeDepositWithPagueNaLotericaMethod
 * Open Test environment
 * Login Account

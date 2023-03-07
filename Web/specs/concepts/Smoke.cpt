@@ -302,6 +302,14 @@ This is a concept file with following syntax for each concept.
 # Enter Pagsmile Details
 * Write value "502.844.147-27" to element "IDCPF"
 * Wait "2" seconds
+* Write value "qur" to element "namePM"
+* Write value "abc@abc.com" to element "emailPM"
+* Write value "75991435897" to element "numberPM"
+
+# Enter CEP Details
+* Write value "98765432" to element "cepPM"
+* Wait "10" seconds
+
 
 # Click on Perform Payment
 * Click to element "performPayment"

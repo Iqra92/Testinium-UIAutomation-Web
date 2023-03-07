@@ -216,24 +216,6 @@ tags: Transaction
 * Continue To Transaction
 * Verification For Transaction Succesfully
 
-## Make Withdrawal With Accent Out Method
-* Open Test environment
-* Login Account
-* Open My account
-* Transactions Withdrawal
-* Choose to Payment Method with "accentOutWithdrawal"
-* Enter Amount
-//* Genarete Random Transaction Value and Enter The Value
-* Select the Card and Enter the Missing Number
-* Select the Card Expiration Date For Month
-* Select the Card Expiration Date For Year
-* Continue To Transaction
-//* Compare the entered withdrawal amount "randomNumber" to amount "requestedAmountInWithdrawalPage" which inside the transactions info by converted text "requestedWithdraw"
-//* Calculate the balance
-* Get Transaction Number In Withdrawal Page
-* Complete the transaction
-* Compare the transactions numbers
-
 ## Make Deposite With PIX In Method
 tags:makeDepositWithPIXMethod
 * Open Test environment
@@ -258,6 +240,7 @@ tags:makeDepositWithBoletoMethod
 * Genarete Random Boleto Deposit Value and Enter that value
 * Continue To Transaction For Boleto Deposit
 * Enter Pagsmile Details
+* Enter CEP Details
 * Click on Perform Payment
 * Continue to Main Site and Go to transaction Page
 //* Enter Account Details

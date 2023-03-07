@@ -483,6 +483,10 @@
     "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[3]/form[1]/div[1]/div[1]/div[1]/div[1]/input[1]",
     "type": "xpath"
   },
+  {"key": "itauTransactionAmount",
+    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[4]/form[1]/div[1]/div[1]/div[1]/div[1]/input[1]",
+    "type": "xpath"
+  },
   {"key": "binanceTransactionAmount",
     "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[5]/form[1]/div[1]/div[1]/div[1]/div[1]/input[1]",
     "type": "xpath"
@@ -548,7 +552,7 @@
     "type": "xpath"
   },
   {"key": "performPayment",
-    "value": "/html[1]/body[1]/div[1]/div[1]/div[5]/div[1]/div[2]/div[2]/button[1][contains(text(),'Confirm')]",
+    "value": "//body/div[@id='root']/div[1]/div[4]/div[1]/div[2]/div[2]/button[1][contains(text(),'Confirm')]",
     "type": "xpath"
   },
   {"key": "goBackToSite",
@@ -557,33 +561,53 @@
   },
   {
     "key": "depositPIXMethod",
-    "value": "//div[contains(text(),'PIX In')]",
+    "value": "//div[@class='transition duration-500 opacity-0 !duration-300 tablet:w-[430px] tablet:rounded-xl max-h-[95%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] hidden tablet:block overflow-y-auto !opacity-100']//div[@data-test-id='payment-deposit-PIX In']",
     "type": "xpath"
   },
   {
     "key": "depositBoletoMethod",
-    "value": "//div[contains(text(),'Boleto In')]",
+    "value": "//div[@class='transition duration-500 opacity-0 !duration-300 tablet:w-[430px] tablet:rounded-xl max-h-[95%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] hidden tablet:block overflow-y-auto !opacity-100']//div[@data-test-id='payment-deposit-Boleto In']",
     "type": "xpath"
   },
   {
     "key": "depositBinanceMethod",
-    "value": "//div[contains(text(),'Crypto In')]",
+    "value": "//div[@class='transition duration-500 opacity-0 !duration-300 tablet:w-[430px] tablet:rounded-xl max-h-[95%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] hidden tablet:block overflow-y-auto !opacity-100']//div[@data-test-id='payment-deposit-Crypto In']",
     "type": "xpath"
   },
 
   {
     "key": "depositPagueNaLotericaMethod",
-    "value": "//div[contains(text(),'Lottery In')]",
+    "value": "//div[@class='transition duration-500 opacity-0 !duration-300 tablet:w-[430px] tablet:rounded-xl max-h-[95%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] hidden tablet:block overflow-y-auto !opacity-100']//div[@data-test-id='payment-deposit-Lottery In']",
     "type": "xpath"
   },
   {
     "key": "depositITAUMethod",
-    "value": "//div[contains(text(),'Deposit Express In')]",
+    "value": "//div[@class='transition duration-500 opacity-0 !duration-300 tablet:w-[430px] tablet:rounded-xl max-h-[95%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] hidden tablet:block overflow-y-auto !opacity-100']//div[@data-test-id='payment-deposit-Deposit Express In']",
     "type": "xpath"
   },
   {
     "key": "IDCPF",
     "value": "//input[@id='inputform-taxid']",
+    "type": "xpath"
+  },
+  {
+    "key": "namePM",
+    "value": "//input[@id='inputform-name']",
+    "type": "xpath"
+  },
+  {
+    "key": "emailPM",
+    "value": "//input[@id='inputform-email']",
+    "type": "xpath"
+  },
+  {
+    "key": "numberPM",
+    "value": "//input[@id='inputform-phone']",
+    "type": "xpath"
+  },
+  {
+    "key": "cepPM",
+    "value": "//body/div[@id='root']/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/input[1]",
     "type": "xpath"
   },
   {
@@ -737,6 +761,11 @@
   {
     "key": "accountNumberCrypto",
     "value": "/html[1]/body[1]/div[13]/div[1]/div[1]/section[1]/form[1]/div[1]/div[3]/div[1]/input[1]",
+    "type": "xpath"
+  },
+  {
+    "key": "transactionPage",
+    "value": "//body/div[11]/div[1]/div[1]/section[1]/div[3]/span[2]/a[1]",
     "type": "xpath"
   }
 ]

@@ -170,6 +170,21 @@
     "type": "xpath"
   },
   {
+    "key": "sideMenuBar",
+    "value": "//header/div[1]/div[2]/button[4]/*[1]",
+    "type": "xpath"
+  },
+  {
+    "key": "balanceSideBar",
+    "value": "//span[contains(text(),'Balance')]",
+    "type": "xpath"
+  },
+  {
+    "key": "transactionHistoryPage",
+    "value": "//button[contains(text(),'Transactions')]",
+    "type": "xpath"
+  },
+  {
     "key": "depositButton",
     "value": "/html[1]/body[1]/div[1]/div[1]/header[1]/div[1]/div[2]/button[1]",
     "type": "xpath"
@@ -559,6 +574,10 @@
     "value": "//a[contains(text(),'Back to shopping')]",
     "type": "xpath"
   },
+  {"key": "goBackToSiteBoleto",
+    "value": "//a[contains(text(),'Back to shopping')]",
+    "type": "xpath"
+  },
   {
     "key": "depositPIXMethod",
     "value": "//div[@class='transition duration-500 opacity-0 !duration-300 tablet:w-[430px] tablet:rounded-xl max-h-[95%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] hidden tablet:block overflow-y-auto !opacity-100']//div[@data-test-id='payment-deposit-PIX In']",
@@ -764,8 +783,53 @@
     "type": "xpath"
   },
   {
+    "key": "paymentVerification",
+    "value": "//div[@class='transition duration-500 opacity-0 !duration-300 rounded-2xl bg-skin-gray max-h-[95%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] hidden tablet:block overflow-y-auto !opacity-100']//span[contains(text(),'Your transaction was successful.')]",
+    "type": "xpath"
+  },
+  {
     "key": "transactionPage",
     "value": "//body/div[11]/div[1]/div[1]/section[1]/div[3]/span[2]/a[1]",
+    "type": "xpath"
+  },
+  {
+    "key": "pagsmileVerificationPage",
+    "value": "//body/div[@id='root']/div[1]/div[4]/div[1]/div[2]/div[2]/div[5]/div[1]/p[1]",
+    "type": "xpath"
+  },
+  {
+    "key": "paymentConfirmation",
+    "value": "//body/div[11]/div[1]/div[1]/section[1]/button[1]",
+    "type": "xpath"
+  },
+  {
+    "key": "transactionNumber",
+    "value": "//body/div[@id='root']/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[3]/div[1]/div[1]/p[1]",
+    "type": "xpath"
+  },
+  {
+    "key": "firstTransactionInBookingPage",
+    "value": "//body/div[@id='__next']/div[1]/div[2]/main[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]",
+    "type": "xpath"
+  },
+  {
+    "key": "loginPagsmileEmail",
+    "value": "//input[@id='email_display']",
+    "type": "xpath"
+  },
+  {
+    "key": "loginPagsmilePassword",
+    "value": "//input[@id='password_display']",
+    "type": "xpath"
+  },
+  {
+    "key": "loginPagsmile",
+    "value": "//button[@id='login']",
+    "type": "xpath"
+  },
+  {
+    "key": "searchButtonPagsmile",
+    "value": "//body/div[@id='app']/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/div[4]/div[2]/button[1]/div[1]",
     "type": "xpath"
   }
 ]

@@ -10,13 +10,17 @@ This is a concept file with following syntax for each concept.
 * Wait "5" seconds
 
 # Login Account
-* Click to element "loginButton"
+* Wait for element then click "loginButton"
+//* Click to element "loginButton"
 * Wait "1" seconds
-* Click to element "loginUserNameArea"
+* Wait for element then click "loginUserNameArea"
+//* Click to element "loginUserNameArea"
 * Write value "+5598765432111" to element "loginUserNameArea"
-* Click to element "loginPasswordArea"
+* Wait for element then click "loginPasswordArea"
+//* Click to element "loginPasswordArea"
 * Write value "Qa123456" to element "loginPasswordArea"
-* Click to element "loginButtonArea"
+* Wait for element then click "loginButtonArea"
+//* Click to element "loginButtonArea"
 * Wait "2" seconds
 
 
@@ -31,11 +35,17 @@ This is a concept file with following syntax for each concept.
 * Click to element "loginButtonArea"
 * Wait "2" seconds
 
+# Login Pagsmile Account
+* Write value "legal@texsportbet.com" to element "loginPagsmileEmail"
+* Write value "Moskv@reka00" to element "loginPagsmilePassword"
+* Wait for element then click "loginPagsmile"
+
 # Register Page Open
 * Click to element "registerButton"
 
 # Register New Account
 * Check if element "phoneNumberTextField" exists
+* Click to element "phoneNumberTextField"
 * Write random Int value to element "phoneNumberTextField"
 * Wait "5" seconds
 * Click to element "currency"
@@ -48,12 +58,20 @@ This is a concept file with following syntax for each concept.
 * Click to element "firstNameInput"
 * Write random Alpha value to element "firstNameInput" starting with "test"
 * Write random Alpha value to element "lastNameInput" starting with "testinium"
+* Click to element "dateOfBirth"
 * Write value "08.12.1992" to element "dateOfBirth"
 * Wait "5" seconds
 * Write values "1q2w3e4r5t" to element "registerPassword"
 * Click to element "acceptCheckBox"
 * Click to element "registerNowButton"
 * Wait "10" seconds
+
+# Go to Side Menu Bar
+* Wait for element then click "sideMenuBar"
+
+# Go to Transaction History Page
+* Wait for element then click "balanceSideBar"
+* Wait for element then click "transactionHistoryPage"
 
 # Place Single Bet
 * "5" saniye bekle
@@ -299,27 +317,41 @@ This is a concept file with following syntax for each concept.
 * Wait for element then click "pagueNaLotericaContinueBtnInWithDeposit"
 * Wait "10" seconds
 
+# Confirmation Of Redirecting To Pagsmile Page
+* Transaction Verification From Text For Deposit "pagsmileVerificationPage"
+
 # Enter Pagsmile Details
 * Write value "502.844.147-27" to element "IDCPF"
 * Wait "2" seconds
 * Write value "qur" to element "namePM"
 * Write value "abc@abc.com" to element "emailPM"
 * Write value "75991435897" to element "numberPM"
+* Wait "2" seconds
 
 # Enter CEP Details
 * Write value "98765432" to element "cepPM"
-* Wait "10" seconds
+* Wait "5" seconds
 
 
 # Click on Perform Payment
-* Click to element "performPayment"
+* Wait for element then click "performPayment"
+* Wait "15" seconds
+
+# Continue to Main Site
+* Wait for element then click "goBackToSite"
 * Wait "5" seconds
 
-# Continue to Main Site and Go to transaction Page
-* Click to element "goBackToSite"
+# Payment Confirmation and Go to transaction Page
+* Transaction Verification From Text For Deposit "paymentVerification"
+* Wait for element then click "paymentConfirmation"
+//* Wait for element then click "transactionPage"
 * Wait "5" seconds
-* Click to element "transactionPage"
-* Wait "5" seconds
+
+# Continue to Main Site For Boleto
+//* Click through JS
+* Wait for element then click "goBackToSiteBoleto"
+* Wait "10" seconds
+
 
 
 # Compare the deposit amount <saveKey> to the value in payment method <saveKeyy> by replaced text <key>
@@ -527,11 +559,15 @@ This is a concept file with following syntax for each concept.
 * Wait "2" seconds
 * Find element by "transactionNumber" and save text "transactionNumber"
 
+# Get Transaction Number In Pagsmile Page
+* Wait "2" seconds
+* Find element by "transactionNumber" and save text "transactionNumber"
+
 # Complete the transaction
 * Wait for element then click "performTransaction"
 
 # Compare the transactions numbers
-* Wait for element then click "bookingPage"
+* Wait "5" seconds
 * Find element by "firstTransactionInBookingPage" and compare saved key "transactionNumber" contains the text of element
 
 # Select the Card and Enter the Missing Number
@@ -567,6 +603,10 @@ This is a concept file with following syntax for each concept.
 
 # Pay Amount
 * Click to element "acctSubmit"
+
+
+# Search Transaction In Listing
+* Wait for element then click "searchButtonPagsmile"
 
 
 

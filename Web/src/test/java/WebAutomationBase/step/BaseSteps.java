@@ -138,7 +138,19 @@ public class BaseSteps extends BaseTest {
     logger.info(findElement(key).getText());
 
     if (isDisplayedBy(By.xpath("//div[contains(text(),'Withdrawal request has been processed successfully')]"))){
-      logger.info("Test Pass");
+      logger.info("Test Pass - Transaction is successfully");
+    }
+    else {
+      logger.info("Test Failed - Transaction not successfully");
+    }
+  }
+  @Step("Transaction Verification From Text For Deposit <key>")
+  public void getTextVerificationForDeposit(String element){
+    findElement(element).getText();
+    logger.info(findElement(element).getText());
+
+    if (findElement(element).isDisplayed()){
+      logger.info("Test Pass: "+findElement(element).getText());
     }
     else {
       logger.info("Test Failed - Transaction not successfully");
@@ -278,6 +290,13 @@ public class BaseSteps extends BaseTest {
   public void javascriptclicker(WebElement element) {
     JavascriptExecutor executor = (JavascriptExecutor) driver;
     executor.executeScript("arguments[0].click();", element);
+  }
+  @Step("Click through JS")
+  public void jsClick() {
+    WebElement element = driver.findElement(By.xpath("//a[contains(text(),'Back to shopping')]"));
+    JavascriptExecutor executor = (JavascriptExecutor) driver;
+    executor.executeScript("arguments[0].click();", element);
+    logger.info("Clicked Element" +element.getText());
   }
   @Step("Select Customer type")
   public void jsclicker() {
@@ -1202,6 +1221,13 @@ public class BaseSteps extends BaseTest {
    //     findElement(num).sendKeys(EMAIL_ADDRESS);
         logger.info("' text is written to the '" + EMAIL_ADDRESS + "' element.");
         break;
+      case EPV_TYPE:
+        elements.get(index).click();
+        clickElement(num);
+        ssendKeys(EVP_NUMBER,num);
+        //     findElement(num).sendKeys(EMAIL_ADDRESS);
+        logger.info("' text is written to the '" + EVP_NUMBER + "' element.");
+        break;
       case SAVINGS:
         elements.get(index).click();
         clickElement(num);
@@ -1551,6 +1577,7 @@ public class BaseSteps extends BaseTest {
           "Find element by <key> and compare saved key <saveKey> contains the text of element"})
   public void equalsSaveTextByKeyContain(String key, String saveKey) throws IOException {
     Assert.assertTrue(getElementText(key).contains(StoreHelper.INSTANCE.getValue(saveKey)));
+    logger.info("Compared Successfully "+getElementText(key));
   }
 
   @Step("Select the option by value <keyy> from the list <key>")

@@ -110,6 +110,12 @@ tags: Register
 * Register Page Open
 * Register New Account
 
+## Transaction History
+tags:transactionHistory
+* Login Account
+* Go to Side Menu Bar
+* Go to Transaction History Page
+
 ## Place new a Bet
 tags: Single Bet
 * Open Test environment
@@ -226,7 +232,8 @@ tags:makeDepositWithPIXMethod
 * Continue To Transaction For PIX Deposit
 * Enter Pagsmile Details
 * Click on Perform Payment
-* Continue to Main Site and Go to transaction Page
+* Continue to Main Site
+* Payment Confirmation and Go to transaction Page
 
 //* Verify the deposit information and continue the main site
 //* Go to Booking Page
@@ -242,7 +249,8 @@ tags:makeDepositWithBoletoMethod
 * Enter Pagsmile Details
 * Enter CEP Details
 * Click on Perform Payment
-* Continue to Main Site and Go to transaction Page
+* Continue to Main Site For Boleto
+* Payment Confirmation and Go to transaction Page
 //* Enter Account Details
 //* Pay Amount
 
@@ -252,11 +260,17 @@ tags:makeDepositWithItauMethod
 * Login Account
 * Open My account
 * Choose to Payment Method with "depositITAUMethod"
-* Genarete Random ITAU Deposit Value and Enter that value
+//* Genarete Random ITAU Deposit Value and Enter that value
 * Continue To Transaction For ITAU Deposit
+* Confirmation Of Redirecting To Pagsmile Page
+* Get Transaction Number In Pagsmile Page
 * Enter Pagsmile Details
 * Click on Perform Payment
-* Continue to Main Site and Go to transaction Page
+* Continue to Main Site
+* Payment Confirmation and Go to transaction Page
+* Go to Side Menu Bar
+* Go to Transaction History Page
+* Compare the transactions numbers
 
 ## Make Deposite With Crypto In Method
 tags:makeDepositWithBinanceMethod
@@ -278,8 +292,16 @@ tags:makeDepositWithPagueNaLotericaMethod
 * Continue To Transaction For PagueNaLoterica Deposit
 * Enter Pagsmile Details
 * Click on Perform Payment
-* Continue to Main Site and Go to transaction Page
+* Continue to Main Site
+* Payment Confirmation and Go to transaction Page
 
+## Login Pagsmile admin
+tags:loginPagsmileAdmin
+* Login Pagsmile Account
 
+## Verify Transactions CallBack In Pagsmile Admin
+tags:verifyTransactionsCallBackInPagsmileAdmin
+* Login Pagsmile Account
+* Search Transaction In Listing
 
 

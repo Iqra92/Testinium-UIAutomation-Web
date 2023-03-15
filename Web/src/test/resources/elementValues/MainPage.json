@@ -831,5 +831,36 @@
     "key": "searchButtonPagsmile",
     "value": "//body/div[@id='app']/div[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/div[4]/div[2]/button[1]/div[1]",
     "type": "xpath"
+  },
+
+  {
+    "key": "fillOrderButton",
+    "value": "//button[contains(text(),'Fill Order')]",
+    "type": "xpath"
+  },
+  {
+    "key": "orderStatusField",
+    "value": "#orderStatus",
+    "type": "css"
+  },
+  {
+    "key": "selectSuccessValue",
+    "value": "//li[@class='el-select-dropdown__item']",
+    "type": "xpath"
+  },
+  {
+    "key": "passwordFillOrder",
+    "value": "/html[1]/body[1]/div[1]/div[1]/div[1]/main[1]/div[2]/div[3]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/div[1]/div[1]/fieldset[1]/div[2]/div[1]/input[1]",
+    "type": "xpath"
+  },
+  {
+    "key": "confirmFillOrderButton",
+    "value": "body.el-popup-parent--hidden.modal-open:nth-child(2) div.app:nth-child(3) div.vuestic-layout div.content-wrap main.content.va-layout.gutter--lg.fluid div.va-row:nth-child(2) div.el-dialog__wrapper:nth-child(3) div.el-dialog div.el-dialog__body div.modals-page:nth-child(3) div.vuestic-modal div.modal-container div.modal.vuestic-vertical-center-modal div.modal-dialog div.modal-content div.modal-footer > button.btn.btn-primary.btn-micro:nth-child(1)",
+    "type": "css"
+  },
+  {
+    "key": "pagsmileTransactionList",
+    "value": "div.app:nth-child(3) div.vuestic-layout div.content-wrap main.content.va-layout.gutter--lg.fluid div.va-row:nth-child(2) div.flex.xs12.md12.w-table:nth-child(2) div.vuestic-widget.no-header div.vuestic-widget-body div.table-responsive > table.table.table-striped.first-td-padding",
+    "type": "css"
   }
 ]

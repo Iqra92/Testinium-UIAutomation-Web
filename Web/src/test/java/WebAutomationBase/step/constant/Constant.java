@@ -1,5 +1,7 @@
 package WebAutomationBase.step.constant;
 
+import org.openqa.selenium.WebElement;
+
 import java.util.regex.PatternSyntaxException;
 
 public class Constant {
@@ -22,6 +24,7 @@ public class Constant {
 
     public static final String ACCOUNT_NUMBER_SAVINGS = "98765432198";
     public static final String ACCOUNT_NUMBER_CHECKING = "98765432198";
+    public static final String SUCCESS_STATUS ="Success";
 
 
 }

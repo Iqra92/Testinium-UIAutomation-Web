@@ -44,7 +44,6 @@ public class BaseTest {
   public void setUp() throws Exception {
 
     String baseUrl = "https://dev-gambling.ligabet.com/";
-//    String baseUrl = "https://dashboard-test.pagsmile.com/";
     String selectPlatform = "win";
     String selectBrowser = "chrome";
 

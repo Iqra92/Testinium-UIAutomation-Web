@@ -230,13 +230,16 @@ tags:makeDepositWithPIXMethod
 * Choose to Payment Method with "depositPIXMethod"
 * Genarete Random PIX Deposit Value and Enter that value
 * Continue To Transaction For PIX Deposit
+* Confirmation Of Redirecting To Pagsmile Page
+* Get Transaction Number In Pagsmile Page
 * Enter Pagsmile Details
 * Click on Perform Payment
 * Continue to Main Site
 * Payment Confirmation and Go to transaction Page
-
-//* Verify the deposit information and continue the main site
-//* Go to Booking Page
+* Go to Side Menu Bar
+* Go to Transaction History Page
+//* Get Transaction Number In Transaction History Page
+* Compare the transactions numbers from pagsmile Page to Website page
 
 ## Make Deposite With Boleto In Method
 tags:makeDepositWithBoletoMethod
@@ -246,11 +249,17 @@ tags:makeDepositWithBoletoMethod
 * Choose to Payment Method with "depositBoletoMethod"
 * Genarete Random Boleto Deposit Value and Enter that value
 * Continue To Transaction For Boleto Deposit
+* Confirmation Of Redirecting To Pagsmile Page
+* Get Transaction Number In Pagsmile Page
 * Enter Pagsmile Details
 * Enter CEP Details
 * Click on Perform Payment
 * Continue to Main Site For Boleto
 * Payment Confirmation and Go to transaction Page
+* Go to Side Menu Bar
+* Go to Transaction History Page
+//* Get Transaction Number In Transaction History Page
+* Compare the transactions numbers from pagsmile Page to Website page
 //* Enter Account Details
 //* Pay Amount
 
@@ -270,7 +279,8 @@ tags:makeDepositWithItauMethod
 * Payment Confirmation and Go to transaction Page
 * Go to Side Menu Bar
 * Go to Transaction History Page
-* Compare the transactions numbers
+//* Get Transaction Number In Transaction History Page
+* Compare the transactions numbers from pagsmile Page to Website page
 
 ## Make Deposite With Crypto In Method
 tags:makeDepositWithBinanceMethod
@@ -290,18 +300,54 @@ tags:makeDepositWithPagueNaLotericaMethod
 * Choose to Payment Method with "depositPagueNaLotericaMethod"
 * Genarete Random PagueNaLoterica Deposit Value and Enter that value
 * Continue To Transaction For PagueNaLoterica Deposit
+* Confirmation Of Redirecting To Pagsmile Page
+* Get Transaction Number In Pagsmile Page
 * Enter Pagsmile Details
 * Click on Perform Payment
 * Continue to Main Site
 * Payment Confirmation and Go to transaction Page
+* Go to Side Menu Bar
+* Go to Transaction History Page
+//* Get Transaction Number In Transaction History Page
+* Compare the transactions numbers from pagsmile Page to Website page
 
-## Login Pagsmile admin
+## Login Dev Ligabet Admin
+* Open new tab
+* Focus on tab number "2"
+* Go to "https://dashboard-test.pagsmile.com/" address
+
+## Login Pagsmile Admin
 tags:loginPagsmileAdmin
-* Login Pagsmile Account
+* Open new tab
+* Focus on tab number "2"
+* Go to "https://dashboard-test.pagsmile.com/" address
+* Login Pagsmile Admin
+* Search Transaction In Listing
+* Go to Fill Order For Select Status
 
 ## Verify Transactions CallBack In Pagsmile Admin
 tags:verifyTransactionsCallBackInPagsmileAdmin
-* Login Pagsmile Account
+* Login Account
+* Open My account
+* Choose to Payment Method with "depositPIXMethod"
+//* Genarete Random PIX Deposit Value and Enter that value
+* Continue To Transaction For PIX Deposit
+* Confirmation Of Redirecting To Pagsmile Page
+* Get Transaction Number In Pagsmile Page
+* Enter Pagsmile Details
+* Click on Perform Payment
+* Continue to Main Site
+* Payment Confirmation and Go to transaction Page
+* Go to Side Menu Bar
+* Go to Transaction History Page
+//* Get Transaction Number In Transaction History Page
+* Compare the transactions numbers from pagsmile Page to Website page
+* Open new tab
+* Focus on tab number "2"
+* Go to "https://dashboard-test.pagsmile.com/" address
+* Login Pagsmile Admin
 * Search Transaction In Listing
+* Check Transaction number in Pagsmile Admin
+//* Go to Fill Order For Select Status
 
 

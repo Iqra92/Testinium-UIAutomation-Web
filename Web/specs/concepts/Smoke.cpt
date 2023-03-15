@@ -35,7 +35,8 @@ This is a concept file with following syntax for each concept.
 * Click to element "loginButtonArea"
 * Wait "2" seconds
 
-# Login Pagsmile Account
+# Login Pagsmile Admin
+* Wait for element to load with key "loginPagsmileEmail"
 * Write value "legal@texsportbet.com" to element "loginPagsmileEmail"
 * Write value "Moskv@reka00" to element "loginPagsmilePassword"
 * Wait for element then click "loginPagsmile"
@@ -563,11 +564,16 @@ This is a concept file with following syntax for each concept.
 * Wait "2" seconds
 * Find element by "transactionNumber" and save text "transactionNumber"
 
+# Get Transaction Number In Transaction History Page
+* Wait "2" seconds
+* Find element by "firstTransactionInBookingPage" and save text "transactionNumber2"
+
 # Complete the transaction
 * Wait for element then click "performTransaction"
 
-# Compare the transactions numbers
+# Compare the transactions numbers from pagsmile Page to Website page
 * Wait "5" seconds
+///* Compare saved key "transactionNumber" contains the other saved key "firstTransactionInBookingPage" of element
 * Find element by "firstTransactionInBookingPage" and compare saved key "transactionNumber" contains the text of element
 
 # Select the Card and Enter the Missing Number
@@ -607,6 +613,23 @@ This is a concept file with following syntax for each concept.
 
 # Search Transaction In Listing
 * Wait for element then click "searchButtonPagsmile"
+* Wait "5" seconds
+
+# Check Transaction number in Pagsmile Admin
+//* Transaction Verification "transactionNumber"
+* Wait "5" seconds
+* Find table list by "pagsmileTransactionList" and search transaction "transactionNumber"
+
+
+
+
+# Go to Fill Order For Select Status
+* Wait for element then click "fillOrderButton"
+* Wait for element then click "orderStatusField"
+* Select Success Value "selectSuccessValue"
+* Wait for element then click "passwordFillOrder"
+* Write value "Moskv@reka00" to element "passwordFillOrder"
+* Wait for element then click "confirmFillOrderButton"
 
 
 

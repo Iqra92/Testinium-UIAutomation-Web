@@ -5,6 +5,7 @@ import WebAutomationBase.helper.ElementHelper;
 import WebAutomationBase.helper.StoreHelper;
 import WebAutomationBase.model.ElementInfo;
 import com.thoughtworks.gauge.Step;
+import groovy.transform.ToString;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.apache.commons.lang.RandomStringUtils;
@@ -157,6 +158,19 @@ public class BaseSteps extends BaseTest {
     }
   }
 
+  @Step("Transaction Verification <key>")
+  public void getTextVerificationFromStoreHelper(String saveKey){
+    String value = StoreHelper.INSTANCE.getValue(saveKey);
+    logger.info("Transaction ID is: "+ StoreHelper.INSTANCE.getValue(saveKey));
+
+    if (isDisplayed(value)){
+      logger.info("Test Pass: Transaction Found ");
+    }
+    else {
+      logger.info("Test Failed - Transaction not Found");
+    }
+  }
+
   @Step("Genarete random number for Deposit methods <key> and saved the number <saveKey>. And write the saved key to the <keyy> element")
   public void picksave(String amountValue,String saveKey, String keyy) throws Exception {
     int randomNumber = generateRandomNumber(sliceNumber(amountValue ,true),
@@ -268,6 +282,9 @@ public class BaseSteps extends BaseTest {
 
   public String getElementText(String key) {
     return findElement(key).getText();
+  }
+  public boolean getTextElement(String key) {
+    return Boolean.parseBoolean(String.valueOf(findElement(key).getText()));
   }
 
   public String getElementAttributeValue(String key, String attribute) {
@@ -399,7 +416,7 @@ public class BaseSteps extends BaseTest {
           "<url> adresine git"})
   public void goToUrl(String url) {
     driver.get(url);
-    logger.info(url + " adresine gidiliyor.");
+    logger.info(url + " going to address.");
   }
 
   @Step({"Wait for element to load with css <css>",
@@ -760,7 +777,23 @@ public class BaseSteps extends BaseTest {
           "Yeni sekme aç"})
   public void chromeOpenNewTab() {
     ((JavascriptExecutor) driver).executeScript("window.open()");
+
   }
+  @Step("Open New Tab With ChromeDriver")
+  public void chromeDriverSwitchToNewTab() {
+    Set<String> windows = driver.getWindowHandles(); //[parentid,childid,subchildId]
+    Iterator<String> it = windows.iterator();
+    String parentId = it.next();
+    String childId = it.next();
+    driver.switchTo().window(childId);
+
+    driver.switchTo().window(parentId);
+
+
+  }
+
+
+
 
   @Step({"Focus on tab number <number>",
           "<number> numaralı sekmeye odaklan"})//Starting from 1
@@ -800,6 +833,18 @@ public class BaseSteps extends BaseTest {
     int index = random.nextInt(elements.size());
     logger.info("index number" + index);
     elements.get(index).click();
+  }
+ @Step("Select Success Value <key>")
+  public void pickParticularValue(String key){
+    List<WebElement> elements = findElements(key);
+    for (int i=0; i<=elements.size(); i++){
+//      logger.info("value is" +elements.get(i).getText());
+      if (Objects.equals(elements.get(i).getText(), SUCCESS_STATUS)) {
+        elements.get(i).click();
+        logger.info("Element is Selected:" + Objects.equals(elements.get(i).getText(), SUCCESS_STATUS));
+        break;
+      }
+    }
   }
 
   //Javascript driverın başlatılması
@@ -990,8 +1035,6 @@ public class BaseSteps extends BaseTest {
     Response response = given().log().all().
             get(path).prettyPeek().then().statusCode(200).extract().response();
   }
-
-
 
 
 
@@ -1576,8 +1619,38 @@ public class BaseSteps extends BaseTest {
   @Step({"<key> li elementi bul ve değerini <saveKey> saklanan değeri içeriyor mu kontrol et",
           "Find element by <key> and compare saved key <saveKey> contains the text of element"})
   public void equalsSaveTextByKeyContain(String key, String saveKey) throws IOException {
-    Assert.assertTrue(getElementText(key).contains(StoreHelper.INSTANCE.getValue(saveKey)));
-    logger.info("Compared Successfully "+getElementText(key));
+
+        String t1 =  getElementText(key).trim();
+        String t2 =  StoreHelper.INSTANCE.getValue(saveKey).trim();
+        if (t1.equalsIgnoreCase(t2)){
+          logger.info("Compared Transaction Successfully => "+ getElementText(key));
+
+          Assert.assertTrue("Done Successful",true);
+
+        }else{
+          logger.info("Compared Transaction Failed => "+ getElementText(key));
+
+          Assert.assertTrue("Done Failed",false);
+
+        }
+  }
+
+  @Step({"Find table list by <key> and search transaction <saveKey>"})
+  public void checkValueFromTable(String key,String saveKey) throws IOException {
+    int index = 0;
+    WebElement baseTable = findElement(key);
+    List<WebElement> tableRows = baseTable.findElements(By.tagName("tr"));
+    logger.info("Row value is"+ tableRows.get(index).getText());
+    for (int i=0; i<=tableRows.size(); i++) {
+      if (Objects.equals(tableRows.get(index).getText(), StoreHelper.INSTANCE.getValue(saveKey))) {
+        logger.info("Transaction is Found:");
+        break;
+
+      } else {
+        logger.info("Transaction Not Found");
+      }
+    }
+
   }
 
   @Step("Select the option by value <keyy> from the list <key>")
@@ -1674,6 +1747,8 @@ public class BaseSteps extends BaseTest {
     String calculatedBalance = StoreHelper.INSTANCE.saveValue(saveKeys,calculatedBalanceString );
     logger.info(calculatedBalanceString);
   }
+
+
 
 
 }

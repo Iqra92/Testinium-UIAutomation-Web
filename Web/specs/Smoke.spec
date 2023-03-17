@@ -314,7 +314,9 @@ tags:makeDepositWithPagueNaLotericaMethod
 ## Login Dev Ligabet Admin
 * Open new tab
 * Focus on tab number "2"
-* Go to "https://dashboard-test.pagsmile.com/" address
+* Go to "https://dev-admin.ligabet.com/" address
+* Login Account For Dev Ligabet Admin
+* Go to Side Menu Bar In Ligabet Admin
 
 ## Login Pagsmile Admin
 tags:loginPagsmileAdmin
@@ -323,6 +325,7 @@ tags:loginPagsmileAdmin
 * Go to "https://dashboard-test.pagsmile.com/" address
 * Login Pagsmile Admin
 * Search Transaction In Listing
+* Check Transaction number in Pagsmile Admin
 * Go to Fill Order For Select Status
 
 ## Verify Transactions CallBack In Pagsmile Admin
@@ -348,6 +351,6 @@ tags:verifyTransactionsCallBackInPagsmileAdmin
 * Login Pagsmile Admin
 * Search Transaction In Listing
 * Check Transaction number in Pagsmile Admin
-//* Go to Fill Order For Select Status
+* Go to Fill Order For Select Status
 
 

@@ -301,22 +301,27 @@ This is a concept file with following syntax for each concept.
 # Continue To Transaction For PIX Deposit
 * Wait for element then click "pixContinueBtnInWithDeposit"
 * Wait "10" seconds
+//* Check Transaction is proceed "checkTransactionProceed"
 
 # Continue To Transaction For Boleto Deposit
 * Wait for element then click "boletoContinueBtnInWithDeposit"
 * Wait "10" seconds
+//* Check Transaction is proceed "checkTransactionProceed"
 
 # Continue To Transaction For ITAU Deposit
 * Wait for element then click "itauContinueBtnInWithDeposit"
 * Wait "10" seconds
+//* Check Transaction is proceed "checkTransactionProceed"
 
 # Continue To Transaction For Binance Deposit
 * Wait for element then click "binanceContinueBtnInWithDeposit"
 * Wait "10" seconds
+//* Check Transaction is proceed "checkTransactionProceed"
 
 # Continue To Transaction For PagueNaLoterica Deposit
 * Wait for element then click "pagueNaLotericaContinueBtnInWithDeposit"
 * Wait "10" seconds
+//* Check Transaction is proceed "checkTransactionProceed"
 
 # Confirmation Of Redirecting To Pagsmile Page
 * Transaction Verification From Text For Deposit "pagsmileVerificationPage"
@@ -332,7 +337,6 @@ This is a concept file with following syntax for each concept.
 # Enter CEP Details
 * Write value "98765432" to element "cepPM"
 * Wait "5" seconds
-
 
 # Click on Perform Payment
 * Wait for element then click "performPayment"
@@ -618,9 +622,8 @@ This is a concept file with following syntax for each concept.
 # Check Transaction number in Pagsmile Admin
 //* Transaction Verification "transactionNumber"
 * Wait "5" seconds
-* Find table list by "pagsmileTransactionList" and search transaction "transactionNumber"
-
-
+//* Click check "pagsmileTransactionID"
+* Find table list by "pagsmileTransactionList" and search transaction "transactionNumber" and click trans ID "pagsmileTransactionID"
 
 
 # Go to Fill Order For Select Status
@@ -630,6 +633,16 @@ This is a concept file with following syntax for each concept.
 * Wait for element then click "passwordFillOrder"
 * Write value "Moskv@reka00" to element "passwordFillOrder"
 * Wait for element then click "confirmFillOrderButton"
+
+# Login Account For Dev Ligabet Admin
+* Wait for element then click "ligaAdminUserName"
+* Write value "qa-admin" to element "ligaAdminUserName"
+* Write value "Testinium123!" to element "ligaAdminPassword"
+* Wait for element then click "ligaLoginButton"
+
+# Go to Side Menu Bar In Ligabet Admin
+* Wait for element then click "ligaAdminSideBarMenu"
+* Wait for element then click "ligaAdminAccounting"
 
 
 

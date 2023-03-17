@@ -5,7 +5,6 @@ import WebAutomationBase.helper.ElementHelper;
 import WebAutomationBase.helper.StoreHelper;
 import WebAutomationBase.model.ElementInfo;
 import com.thoughtworks.gauge.Step;
-import groovy.transform.ToString;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.apache.commons.lang.RandomStringUtils;
@@ -168,6 +167,19 @@ public class BaseSteps extends BaseTest {
     }
     else {
       logger.info("Test Failed - Transaction not Found");
+    }
+  }
+
+  @Step("Check Transaction is proceed <key>")
+  public void TextVerification(String key){
+    String value = String.valueOf(findElement(key));
+//    logger.info("Transaction ID is: "+ value);
+
+    if (isDisplayed(value)){
+      logger.info("Test Failed - Transaction not Proceed: " + value);
+    }
+    else {
+      logger.info("Test Pass: Transaction is Proceed ");
     }
   }
 
@@ -1320,6 +1332,8 @@ public class BaseSteps extends BaseTest {
 
   }
 
+
+
   public int generateRandomNumber(String min, String max) throws Exception {
 
     Random random = new Random();
@@ -1635,15 +1649,34 @@ public class BaseSteps extends BaseTest {
         }
   }
 
-  @Step({"Find table list by <key> and search transaction <saveKey>"})
-  public void checkValueFromTable(String key,String saveKey) throws IOException {
-    int index = 0;
+//  @Step({"Find table list by <key> and search transaction <saveKey>"})
+//  public void checkValueFromTable(String key,String saveKey) throws IOException {
+//    WebElement baseTable = findElement(key);
+//    List<WebElement> tableRows = baseTable.findElements(By.tagName("tr"));
+//
+//    for (int i=0; i<=tableRows.size(); i++) {
+//      if ((tableRows.get(i).getText()).contains(StoreHelper.INSTANCE.getValue(saveKey))) {
+//        logger.info("Transaction is Found:");
+//        break;
+//
+//      } else {
+//        logger.info("Transaction Not Found");
+//      }
+//    }
+//
+//  }
+
+  @Step({"Find table list by <key> and search transaction <saveKey> and click trans ID <key>"})
+  public void checkValueFromTable(String key,String saveKey,String transid) throws IOException {
     WebElement baseTable = findElement(key);
+    String idtrans = findElement(transid).getText();
     List<WebElement> tableRows = baseTable.findElements(By.tagName("tr"));
-    logger.info("Row value is"+ tableRows.get(index).getText());
     for (int i=0; i<=tableRows.size(); i++) {
-      if (Objects.equals(tableRows.get(index).getText(), StoreHelper.INSTANCE.getValue(saveKey))) {
-        logger.info("Transaction is Found:");
+      logger.info("Rows => :"+ tableRows.get(i).getText());
+      if ((tableRows.get(i).getText()).contains(StoreHelper.INSTANCE.getValue(saveKey)) && ( tableRows.get(i).getText().contains(idtrans))) {
+        logger.info("Transaction is Found:"+ tableRows.get(i).getText());
+       // baseTable.findElement(By.tagName("td")).click();
+        findElement(transid).click();
         break;
 
       } else {

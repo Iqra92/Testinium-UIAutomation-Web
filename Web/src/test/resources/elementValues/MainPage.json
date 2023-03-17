@@ -547,7 +547,7 @@
     "type": "xpath"
   },
   {"key": "pixContinueBtnInWithDeposit",
-    "value": "//body/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[2]/form[1]/div[1]/button[1][contains(text(),'Proceed to payment')]",
+    "value": "//body/div[15]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[2]/form[1]/div[1]/button[1][contains(text(),'Proceed to payment')]",
     "type": "xpath"
   },
   {"key": "boletoContinueBtnInWithDeposit",
@@ -798,6 +798,11 @@
     "type": "xpath"
   },
   {
+    "key": "checkTransactionProceed",
+    "value": "//div[contains(text(),'The request exceeded the configured timeout of `00')]",
+    "type": "xpath"
+  },
+  {
     "key": "paymentConfirmation",
     "value": "//body/div[11]/div[1]/div[1]/section[1]/button[1]",
     "type": "xpath"
@@ -860,7 +865,37 @@
   },
   {
     "key": "pagsmileTransactionList",
-    "value": "div.app:nth-child(3) div.vuestic-layout div.content-wrap main.content.va-layout.gutter--lg.fluid div.va-row:nth-child(2) div.flex.xs12.md12.w-table:nth-child(2) div.vuestic-widget.no-header div.vuestic-widget-body div.table-responsive > table.table.table-striped.first-td-padding",
+    "value": "tbody",
     "type": "css"
+  },
+  {
+    "key": "pagsmileTransactionID",
+    "value": "//a[@class='alink']",
+    "type": "xpath"
+  },
+  {
+    "key": "ligaAdminUserName",
+    "value": "//input[@name='userName']",
+    "type": "xpath"
+  },
+  {
+    "key": "ligaAdminPassword",
+    "value": "//input[@type='password']",
+    "type": "xpath"
+  },
+  {
+    "key": "ligaLoginButton",
+    "value": "//span[@class='ng-star-inserted']",
+    "type": "xpath"
+  },
+  {
+    "key": "ligaAdminSideBarMenu",
+    "value": "//i[@class='anticon anticon-menu-unfold ng-star-inserted']",
+    "type": "xpath"
+  },
+  {
+    "key": "ligaAdminAccounting",
+    "value": "//span[contains(text(),'Accounting')]",
+    "type": "xpath"
   }
 ]

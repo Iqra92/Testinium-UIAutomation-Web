@@ -616,15 +616,19 @@ This is a concept file with following syntax for each concept.
 
 
 # Search Transaction In Listing
+* Wait "15" seconds
 * Wait for element then click "searchButtonPagsmile"
-* Wait "5" seconds
+* Wait "10" seconds
+
 
 # Check Transaction number in Pagsmile Admin
 //* Transaction Verification "transactionNumber"
 * Wait "5" seconds
-//* Click check "pagsmileTransactionID"
-* Find table list by "pagsmileTransactionList" and search transaction "transactionNumber" and click trans ID "pagsmileTransactionID"
+* Find table list by "pagsmileTransactionList" and click trans ID "pagsmileTransactionID"
+//* Find table list by "pagsmileTransactionList" and search transaction "transactionNumber" and click trans ID "pagsmileTransactionID"
 
+# Check Transaction Status in Pagsmile Admin
+* Find table list by "pagsmileTransactionList" and check transaction status "pagsmileTransactionStatus"
 
 # Go to Fill Order For Select Status
 * Wait for element then click "fillOrderButton"

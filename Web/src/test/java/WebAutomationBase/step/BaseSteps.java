@@ -24,6 +24,7 @@ import java.sql.Timestamp;
 import java.text.DateFormat;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.time.LocalDate;
 import java.util.*;
 
@@ -145,7 +146,7 @@ public class BaseSteps extends BaseTest {
     }
   }
   @Step("Transaction Verification From Text For Deposit <key>")
-  public void getTextVerificationForDeposit(String element){
+  public void redirectingToPagsmileForDeposit(String element){
     findElement(element).getText();
     logger.info(findElement(element).getText());
 
@@ -153,7 +154,7 @@ public class BaseSteps extends BaseTest {
       logger.info("Test Pass: "+findElement(element).getText());
     }
     else {
-      logger.info("Test Failed - Transaction not successfully");
+      logger.info("Test Failed - Redirecting to Pagsmile page not successfully");
     }
   }
 
@@ -1666,25 +1667,62 @@ public class BaseSteps extends BaseTest {
 //
 //  }
 
-  @Step({"Find table list by <key> and search transaction <saveKey> and click trans ID <key>"})
-  public void checkValueFromTable(String key,String saveKey,String transid) throws IOException {
+//  @Step({"Find table list by <key> and search transaction <saveKey> and click trans ID <key>"})
+//  public void checkValueFromTable(String key,String saveKey,String transid) throws IOException {
+//    WebElement baseTable = findElement(key);
+//    String idtrans = findElement(transid).getText();
+//    List<WebElement> tableRows = baseTable.findElements(By.tagName("tr"));
+//    for (int i=0; i<=tableRows.size(); i++) {
+//      logger.info("Rows => :"+ tableRows.get(i).getText());
+//      if ((tableRows.get(i).getText()).contains(StoreHelper.INSTANCE.getValue(saveKey)) && ( tableRows.get(i).getText().contains(idtrans))) {
+//        logger.info("Transaction is Found:"+ tableRows.get(i).getText());
+// //       baseTable.findElement(By.tagName("td[1]")).click();
+//        findElement(transid).click();
+//        break;
+//
+//      } else {
+//        logger.info("Transaction Not Found");
+//      }
+//    }
+//  }
+    @Step({"Find table list by <key> and click trans ID <key>"})
+    public void checkValueFromTable(String key,String transid) throws IOException {
+      WebElement baseTable = findElement(key);
+      WebElement idtrans = findElement(transid);
+      List<WebElement> tableRows = baseTable.findElements(By.tagName("tr"));
+         for (int i=0; i<=tableRows.size(); i++) {
+             logger.info("Rows => :"+ tableRows.get(i).getText());
+          if ((tableRows.get(i).getText()).contains(TRANSACTION_NUMBER)) {
+              logger.info("Transaction is Found:"+ tableRows.get(i).getText());
+              tableRows.get(i).findElement(By.tagName("td")).click();
+              break;
+
+    }     else {
+            logger.info("Transaction Not Found");
+    }
+  }
+}
+
+  @Step({"Find table list by <key> and check transaction status <key>"})
+  public void checkStatusFromTable(String key,String status) throws IOException {
     WebElement baseTable = findElement(key);
-    String idtrans = findElement(transid).getText();
+    WebElement transactionStatus = findElement(status);
+
     List<WebElement> tableRows = baseTable.findElements(By.tagName("tr"));
     for (int i=0; i<=tableRows.size(); i++) {
       logger.info("Rows => :"+ tableRows.get(i).getText());
-      if ((tableRows.get(i).getText()).contains(StoreHelper.INSTANCE.getValue(saveKey)) && ( tableRows.get(i).getText().contains(idtrans))) {
-        logger.info("Transaction is Found:"+ tableRows.get(i).getText());
-       // baseTable.findElement(By.tagName("td")).click();
-        findElement(transid).click();
-        break;
+      if ((tableRows.get(i).getText()).contains(TRANSACTION_NUMBER) && (tableRows.get(i).getText().contains(transactionStatus.getText()))) {
+          logger.info("Transaction is Found "+ tableRows.get(i).getText() + "\n" + "Status is: " + transactionStatus.getText());
+          break;
+        }
+        else {
 
-      } else {
-        logger.info("Transaction Not Found");
-      }
+          logger.info("Transaction is not in Success Status");
+        }
     }
-
   }
+
+
 
   @Step("Select the option by value <keyy> from the list <key>")
   public void selectValue(String key, String keyy)  {

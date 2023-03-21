@@ -327,6 +327,8 @@ tags:loginPagsmileAdmin
 * Search Transaction In Listing
 * Check Transaction number in Pagsmile Admin
 * Go to Fill Order For Select Status
+* Search Transaction In Listing
+* Check Transaction Status in Pagsmile Admin
 
 ## Verify Transactions CallBack In Pagsmile Admin
 tags:verifyTransactionsCallBackInPagsmileAdmin
@@ -352,5 +354,7 @@ tags:verifyTransactionsCallBackInPagsmileAdmin
 * Search Transaction In Listing
 * Check Transaction number in Pagsmile Admin
 * Go to Fill Order For Select Status
+* Search Transaction In Listing
+* Check Transaction Status in Pagsmile Admin
 
 

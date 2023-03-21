@@ -865,7 +865,7 @@
   },
   {
     "key": "pagsmileTransactionList",
-    "value": "tbody",
+    "value": "div.app:nth-child(3) div.vuestic-layout div.content-wrap main.content.va-layout.gutter--lg.fluid div.va-row:nth-child(2) div.flex.xs12.md12.w-table:nth-child(2) div.vuestic-widget.no-header div.vuestic-widget-body div.table-responsive > table.table.table-striped.first-td-padding",
     "type": "css"
   },
   {
@@ -873,6 +873,12 @@
     "value": "//a[@class='alink']",
     "type": "xpath"
   },
+  {
+    "key": "pagsmileTransactionStatus",
+    "value": "//span[@class='el-tag el-tag--success el-tag--dark']",
+    "type": "xpath"
+  },
+
   {
     "key": "ligaAdminUserName",
     "value": "//input[@name='userName']",

@@ -624,11 +624,10 @@ This is a concept file with following syntax for each concept.
 # Check Transaction number in Pagsmile Admin
 //* Transaction Verification "transactionNumber"
 * Wait "5" seconds
-* Find table list by "pagsmileTransactionList" and click trans ID "pagsmileTransactionID"
-//* Find table list by "pagsmileTransactionList" and search transaction "transactionNumber" and click trans ID "pagsmileTransactionID"
+* Find table list by "pagsmileTransactionList" and search transaction "transactionNumber" and click trans ID "pagsmileTransactionID"
 
 # Check Transaction Status in Pagsmile Admin
-* Find table list by "pagsmileTransactionList" and check transaction status "pagsmileTransactionStatus"
+* Find table list by "pagsmileTransactionList" and check transaction status "pagsmileTransactionStatus" and store value "transactionNumber"
 
 # Go to Fill Order For Select Status
 * Wait for element then click "fillOrderButton"
@@ -639,14 +638,30 @@ This is a concept file with following syntax for each concept.
 * Wait for element then click "confirmFillOrderButton"
 
 # Login Account For Dev Ligabet Admin
+* Wait "5" seconds
 * Wait for element then click "ligaAdminUserName"
 * Write value "qa-admin" to element "ligaAdminUserName"
 * Write value "Testinium123!" to element "ligaAdminPassword"
 * Wait for element then click "ligaLoginButton"
 
 # Go to Side Menu Bar In Ligabet Admin
-* Wait for element then click "ligaAdminSideBarMenu"
-* Wait for element then click "ligaAdminAccounting"
+* Click through JS "ligaAdminSideBarMenu"
+//* Wait for element then click "ligaAdminSideBarMenu"
+
+# Go to Accounting in Ligabet Admin
+* Wait "10" seconds
+* Click through JS "ligaAdminAccounting"
+//* Wait for element then click "ligaAdminAccounting"
+
+# Go to Transaction page in Ligabet Admin
+* Wait for element then click "ligaAdminTransaction"
+* Wait "10" seconds
+
+# Check Transaction Status in Dev Ligabet Admin
+* Refresh page
+* Wait "5" seconds
+* Find table list by "ligabetAdminTransactionList" and get value "transactionNumber" then check status
+
 
 
 

@@ -321,17 +321,18 @@ public class BaseSteps extends BaseTest {
     JavascriptExecutor executor = (JavascriptExecutor) driver;
     executor.executeScript("arguments[0].click();", element);
   }
-  @Step("Click through JS")
-  public void jsClick() {
-    WebElement element = driver.findElement(By.xpath("//a[contains(text(),'Back to shopping')]"));
+  @Step("Click through JS <key>")
+  public void jsClick(String key) {
+    WebElement element = findElement(key);
     JavascriptExecutor executor = (JavascriptExecutor) driver;
-    executor.executeScript("arguments[0].click();", element);
-    logger.info("Clicked Element" +element.getText());
+    executor.executeScript("var event = new MouseEvent('click', { 'view': window, 'bubbles': true, 'cancelable': true }); arguments[0].dispatchEvent(event);", element);
+ //   executor.executeScript("arguments[0].click();", element);
+    logger.info("Clicked Element");
   }
   @Step("Select Customer type")
   public void jsclicker() {
     JavascriptExecutor executor = (JavascriptExecutor) driver;
-    executor.executeScript("document.getElementsByClassName('ant-select-item-option-content').click();");
+    executor.executeScript("document.getElementsByxpath('//nxt-header-item/nxt-sidebar-toggle[1]/i[1]/*[1]').click();");
   }
 
   @Step({"Wait <value> seconds",
@@ -852,9 +853,9 @@ public class BaseSteps extends BaseTest {
     List<WebElement> elements = findElements(key);
     for (int i=0; i<=elements.size(); i++){
 //      logger.info("value is" +elements.get(i).getText());
-      if (Objects.equals(elements.get(i).getText(), SUCCESS_STATUS)) {
+      if (Objects.equals(elements.get(i).getText(), SUCCESS_STATUS_PAGSMILE)) {
         elements.get(i).click();
-        logger.info("Element is Selected:" + Objects.equals(elements.get(i).getText(), SUCCESS_STATUS));
+        logger.info("Element is Selected:" + Objects.equals(elements.get(i).getText(), SUCCESS_STATUS_PAGSMILE));
         break;
       }
     }
@@ -1649,50 +1650,14 @@ public class BaseSteps extends BaseTest {
 
         }
   }
-
-//  @Step({"Find table list by <key> and search transaction <saveKey>"})
-//  public void checkValueFromTable(String key,String saveKey) throws IOException {
-//    WebElement baseTable = findElement(key);
-//    List<WebElement> tableRows = baseTable.findElements(By.tagName("tr"));
-//
-//    for (int i=0; i<=tableRows.size(); i++) {
-//      if ((tableRows.get(i).getText()).contains(StoreHelper.INSTANCE.getValue(saveKey))) {
-//        logger.info("Transaction is Found:");
-//        break;
-//
-//      } else {
-//        logger.info("Transaction Not Found");
-//      }
-//    }
-//
-//  }
-
-//  @Step({"Find table list by <key> and search transaction <saveKey> and click trans ID <key>"})
-//  public void checkValueFromTable(String key,String saveKey,String transid) throws IOException {
-//    WebElement baseTable = findElement(key);
-//    String idtrans = findElement(transid).getText();
-//    List<WebElement> tableRows = baseTable.findElements(By.tagName("tr"));
-//    for (int i=0; i<=tableRows.size(); i++) {
-//      logger.info("Rows => :"+ tableRows.get(i).getText());
-//      if ((tableRows.get(i).getText()).contains(StoreHelper.INSTANCE.getValue(saveKey)) && ( tableRows.get(i).getText().contains(idtrans))) {
-//        logger.info("Transaction is Found:"+ tableRows.get(i).getText());
-// //       baseTable.findElement(By.tagName("td[1]")).click();
-//        findElement(transid).click();
-//        break;
-//
-//      } else {
-//        logger.info("Transaction Not Found");
-//      }
-//    }
-//  }
-    @Step({"Find table list by <key> and click trans ID <key>"})
-    public void checkValueFromTable(String key,String transid) throws IOException {
+  @Step({"Find table list by <key> and search transaction <key> and click trans ID <saveKey>"})
+    public void checkValueFromTable(String key,String saveKey,String transid) throws IOException {
       WebElement baseTable = findElement(key);
-      WebElement idtrans = findElement(transid);
+//      WebElement idtrans = findElement(transid);
       List<WebElement> tableRows = baseTable.findElements(By.tagName("tr"));
          for (int i=0; i<=tableRows.size(); i++) {
              logger.info("Rows => :"+ tableRows.get(i).getText());
-          if ((tableRows.get(i).getText()).contains(TRANSACTION_NUMBER)) {
+          if ((tableRows.get(i).getText()).contains(StoreHelper.INSTANCE.getValue(saveKey))) {
               logger.info("Transaction is Found:"+ tableRows.get(i).getText());
               tableRows.get(i).findElement(By.tagName("td")).click();
               break;
@@ -1703,15 +1668,15 @@ public class BaseSteps extends BaseTest {
   }
 }
 
-  @Step({"Find table list by <key> and check transaction status <key>"})
-  public void checkStatusFromTable(String key,String status) throws IOException {
+  @Step({"Find table list by <key> and check transaction status <key> and store value <saveKey>"})
+  public void checkStatusFromTable(String key,String status,String saveKey) throws IOException {
     WebElement baseTable = findElement(key);
     WebElement transactionStatus = findElement(status);
 
     List<WebElement> tableRows = baseTable.findElements(By.tagName("tr"));
     for (int i=0; i<=tableRows.size(); i++) {
       logger.info("Rows => :"+ tableRows.get(i).getText());
-      if ((tableRows.get(i).getText()).contains(TRANSACTION_NUMBER) && (tableRows.get(i).getText().contains(transactionStatus.getText()))) {
+      if ((tableRows.get(i).getText()).contains(StoreHelper.INSTANCE.getValue(saveKey)) && (tableRows.get(i).getText().contains(transactionStatus.getText()))) {
           logger.info("Transaction is Found "+ tableRows.get(i).getText() + "\n" + "Status is: " + transactionStatus.getText());
           break;
         }
@@ -1719,6 +1684,26 @@ public class BaseSteps extends BaseTest {
 
           logger.info("Transaction is not in Success Status");
         }
+    }
+  }
+
+  @Step({"Find table list by <key> and get value <saveKey> then check status"})
+  public void checkStatusFromTableList(String key,String saveKey) throws IOException {
+    WebElement baseTable = findElement(key);
+
+    List<WebElement> tableRows = baseTable.findElements(By.tagName("tr"));
+    for (int i=0; i<=tableRows.size(); i++) {
+
+      logger.info("Rows => :"+ tableRows.get(i).getText());
+      if ((tableRows.get(i).getText()).contains(StoreHelper.INSTANCE.getValue(saveKey)) && (tableRows.get(i).getText().contains(SUCCESS_STATUS))){
+        logger.info("Transaction is Found "+ tableRows.get(i).getText() + "Status is: " + SUCCESS_STATUS);
+        break;
+      }
+      else {
+
+        logger.info("Transaction is not in Success Status");
+      }
+
     }
   }
 

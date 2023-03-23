@@ -24,8 +24,9 @@ public class Constant {
 
     public static final String ACCOUNT_NUMBER_SAVINGS = "98765432198";
     public static final String ACCOUNT_NUMBER_CHECKING = "98765432198";
-    public static final String SUCCESS_STATUS ="Success";
-    public static final String TRANSACTION_NUMBER = "16N24FY03YM3CR";
+    public static final String SUCCESS_STATUS ="Successful";
+    public static final String SUCCESS_STATUS_PAGSMILE = "Success";
+    public static final String TRANSACTION_NUMBER = "1C5WJ25MJHUF1X";
 
 
 }

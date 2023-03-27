@@ -1,8 +1,10 @@
 package WebAutomationBase.base;
 
+import com.google.common.collect.ImmutableMap;
 import com.thoughtworks.gauge.AfterScenario;
 import com.thoughtworks.gauge.BeforeScenario;
 import org.apache.commons.lang3.StringUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,11 +16,16 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.DriverCommand;
 import org.openqa.selenium.remote.RemoteExecuteMethod;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.File;
 import java.net.URL;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.time.Duration;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -28,6 +35,7 @@ import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
 
+  public static final String ADD_HEADERS_CLOUDFLARE = "https://webdriver.modheader.com/add?cf-access-client-id=ecc777a18e7a511f683db6fde508c6f1.access&cf-access-client-secret=58956fd1b52c3b436ac2ac8bea82af5586b76d878b465f7390aa7a2a30ca8503";
   protected static WebDriver driver;
 
   protected static WebDriverWait webDriverWait;
@@ -43,7 +51,7 @@ public class BaseTest {
 
   public void setUp() throws Exception {
 
-    String baseUrl = "https://dev-gambling.ligabet.com/";
+     String baseUrl = "https://dev-gambling.ligabet.com/";
     String selectPlatform = "win";
     String selectBrowser = "chrome";
 
@@ -52,23 +60,28 @@ public class BaseTest {
     if (StringUtils.isEmpty(System.getenv("key"))) {
       if ("win".equalsIgnoreCase(selectPlatform)) {
         if ("chrome".equalsIgnoreCase(selectBrowser)) {
+
+          Path currentRelativePath = Paths.get("C:\\Users\\sahabt\\node_modules\\chrome-modheader\\modheader.crx");
           ChromeOptions options = new ChromeOptions();
+          options.addExtensions(new File(currentRelativePath.toAbsolutePath().toString()));
           capabilities = DesiredCapabilities.chrome();
           capabilities.setCapability("autoGrantPermissions", false);
           capabilities.setCapability("dismissAlert", true);
+
+
           Map<String, Object> prefs = new HashMap<String, Object>();
           prefs.put("profile.default_content_setting_values.notifications", 2);
           prefs.put("credentials_enable_service", false);
           prefs.put("profile.password_manager_enabled", false);
           options.setExperimentalOption("prefs", prefs);
-          //  options.addArguments("--kiosk");
           options.addArguments("--start-fullscreen");
-          options.addArguments("--disable-notifications");
           options.addArguments("disable-popup-blocking");
           System.setProperty("webdriver.chrome.driver", "web_driver/chromedriver.exe");
           driver = new ChromeDriver(options);
+          driver.get(ADD_HEADERS_CLOUDFLARE);
+          new WebDriverWait(driver, 5).until(ExpectedConditions.titleIs("Done"));
           driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
-          Thread.sleep(5000);
+          Thread.sleep(4000);
 
         } else if ("firefox".equalsIgnoreCase(selectBrowser)) {
           FirefoxOptions options = new FirefoxOptions();
@@ -150,6 +163,7 @@ public class BaseTest {
     //driver.manage().timeouts().pageLoadTimeout(60,TimeUnit.SECONDS);
 
     driver.manage().window().fullscreen();
+
 
     driver.get(baseUrl);
     driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);

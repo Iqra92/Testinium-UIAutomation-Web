@@ -12,10 +12,10 @@ public class Constant {
     public static final String COMMA = ",";
     public static final String EMPTY = "";
     public static final String  IDENTITY_TYPE = "CPF";
-    public static final String  IDENTITY_NUMBER = "11111111111";
+    public static final String  IDENTITY_NUMBER = "50284414727";
     public static final String  IDENTITY_OTHER_NUMBER = "11111111111111";
     public static final String PHONE_NUMBER = "+5987654321";
-    public static final String EMAIL_ADDRESS= "Qa@test.com";
+    public static final String EMAIL_ADDRESS= "testetstest@mail.com";
     public static final String EPV_TYPE = "EVP";
     public static final String EVP_NUMBER = "123456789123456789123456789123456789";
     public static final String SPECIAL_CHARACTER = "@!#$%&*(?/";
@@ -26,7 +26,7 @@ public class Constant {
     public static final String ACCOUNT_NUMBER_CHECKING = "98765432198";
     public static final String SUCCESS_STATUS ="Successful";
     public static final String SUCCESS_STATUS_PAGSMILE = "Success";
-    public static final String TRANSACTION_NUMBER = "1C5WJ25MJHUF1X";
+    public static final String TRANSACTION_NUMBER = "143E1215MU6273";
 
 
 }

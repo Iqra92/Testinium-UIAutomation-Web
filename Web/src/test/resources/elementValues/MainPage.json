@@ -451,15 +451,15 @@
     "type": "xpath"
   },
   {"key": "boletoMinAmount",
-    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[3]/form[1]/div[1]/div[1]/div[1]/span[1]",
+    "value": "/html[1]/body[1]/div[15]/div[1]/div[1]/section[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[3]/form[1]/div[1]/div[1]/div[1]/span[1]",
     "type": "xpath"
   },
   {"key": "boletoHighAmount",
-    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[3]/form[1]/div[1]/div[1]/div[1]/span[1]",
+    "value": "/html[1]/body[1]/div[15]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[3]/form[1]/div[1]/div[1]/div[1]/span[1]",
     "type": "xpath"
   },
   {"key": "binanceMinAmount",
-    "value": "//body/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[5]/form[1]/div[1]/div[1]/div[1]/span[1]",
+    "value": "//body/div[15]/div[1]/div[1]/section[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[5]/form[1]/div[1]/div[1]/div[1]/span[1]",
     "type": "xpath"
   },
   {"key": "binanceHighAmount",
@@ -467,7 +467,7 @@
     "type": "xpath"
   },
   {"key": "itauMinAmount",
-    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[4]/form[1]/div[1]/div[1]/div[1]/span[1]",
+    "value": "//body/div[15]/div[1]/div[1]/section[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[4]/form[1]/div[1]/div[1]/div[1]/span[1]",
     "type": "xpath"
   },
   {"key": "itauHighAmount",
@@ -475,7 +475,7 @@
     "type": "xpath"
   },
   {"key": "pagueNaLotericaMinAmount",
-    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[6]/form[1]/div[1]/div[1]/div[1]/span[1]",
+    "value": "//body/div[15]/div[1]/div[1]/section[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[6]/form[1]/div[1]/div[1]/div[1]/span[1]",
     "type": "xpath"
   },
   {"key": "pagueNaLotericaHighAmount",
@@ -495,19 +495,19 @@
     "type": "xpath"
   },
   {"key": "boletoTransactionAmount",
-    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[3]/form[1]/div[1]/div[1]/div[1]/div[1]/input[1]",
+    "value": "/html[1]/body[1]/div[15]/div[1]/div[1]/section[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[3]/form[1]/div[1]/div[1]/div[1]/div[1]/input[1]",
     "type": "xpath"
   },
   {"key": "itauTransactionAmount",
-    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[4]/form[1]/div[1]/div[1]/div[1]/div[1]/input[1]",
+    "value": "/html[1]/body[1]/div[15]/div[1]/div[1]/section[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[4]/form[1]/div[1]/div[1]/div[1]/div[1]/input[1]",
     "type": "xpath"
   },
   {"key": "binanceTransactionAmount",
-    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[5]/form[1]/div[1]/div[1]/div[1]/div[1]/input[1]",
+    "value": "/html[1]/body[1]/div[15]/div[1]/div[1]/section[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[5]/form[1]/div[1]/div[1]/div[1]/div[1]/input[1]",
     "type": "xpath"
   },
   {"key": "pagueNaLotericaTransactionAmount",
-    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[6]/form[1]/div[1]/div[1]/div[1]/div[1]/input[1]",
+    "value": "/html[1]/body[1]/div[15]/div[1]/div[1]/section[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[6]/form[1]/div[1]/div[1]/div[1]/div[1]/input[1]",
     "type": "xpath"
   },
   {"key": "bankCodeInWithdrawalPage",
@@ -523,7 +523,7 @@
     "type": "css"
   },
   {"key": "identityTypeInWithdrawalPage",
-    "value": "/html[1]/body[1]/div[13]/div[1]/div[1]/section[1]/form[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/input[1]",
+    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/form[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/input[1]",
     "type": "xpath"
   },
   {"key": "listOfIdentityTypeInWithdrawalPage",
@@ -531,7 +531,11 @@
     "type": "xpath"
   },
   {"key": "identityKeyTypeInWithdrawal",
-    "value": "/html[1]/body[1]/div[13]/div[1]/div[1]/section[1]/form[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/input[1]",
+    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/form[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/input[1]",
+    "type": "xpath"
+  },
+  {"key": "identityKeyTypeInWithdrawalEmail",
+    "value": "//span[contains(text(),'EMAIL')]",
     "type": "xpath"
   },
   {"key": "listOfKeyTypeInWithdrawal",
@@ -539,11 +543,11 @@
     "type": "xpath"
   },
   {"key": "keyNumber",
-    "value": "/html[1]/body[1]/div[13]/div[1]/div[1]/section[1]/form[1]/div[1]/div[4]/div[1]/input[1]",
+    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/form[1]/div[1]/div[4]/div[1]/input[1]",
     "type": "xpath"
   },
   {"key": "continueBtnInWithdrawal",
-    "value": "//body/div[13]/div[1]/div[1]/section[1]/form[1]/div[1]/button[1]",
+    "value": "//body/div[14]/div[1]/div[1]/section[1]/form[1]/div[1]/button[1]",
     "type": "xpath"
   },
   {"key": "pixContinueBtnInWithDeposit",
@@ -551,19 +555,19 @@
     "type": "xpath"
   },
   {"key": "boletoContinueBtnInWithDeposit",
-    "value": "//body/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[3]/form[1]/div[1]/button[1][contains(text(),'Proceed to payment')]",
+    "value": "//body/div[15]/div[1]/div[1]/section[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[3]/form[1]/div[1]/button[1][contains(text(),'Proceed to payment')]",
     "type": "xpath"
   },
   {"key": "binanceContinueBtnInWithDeposit",
-    "value": "//body/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[5]/form[1]/div[1]/button[1][contains(text(),'Proceed to payment')]",
+    "value": "//body/div[15]/div[1]/div[1]/section[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[5]/form[1]/div[1]/button[1][contains(text(),'Proceed to payment')]",
     "type": "xpath"
   },
   {"key": "pagueNaLotericaContinueBtnInWithDeposit",
-    "value": "//body/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[6]/form[1]/div[1]/button[1][contains(text(),'Proceed to payment')]",
+    "value": "//body/div[15]/div[1]/div[1]/section[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[6]/form[1]/div[1]/button[1][contains(text(),'Proceed to payment')]",
     "type": "xpath"
   },
   {"key": "itauContinueBtnInWithDeposit",
-    "value": "//body/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[2]/div[4]/form[1]/div[1]/button[1][contains(text(),'Proceed to payment')]",
+    "value": "//body/div[15]/div[1]/div[1]/section[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[4]/form[1]/div[1]/button[1][contains(text(),'Proceed to payment')]",
     "type": "xpath"
   },
   {"key": "performPayment",
@@ -585,23 +589,23 @@
   },
   {
     "key": "depositBoletoMethod",
-    "value": "//div[@class='transition duration-500 opacity-0 !duration-300 tablet:w-[430px] tablet:rounded-xl max-h-[95%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] hidden tablet:block overflow-y-auto !opacity-100']//div[@data-test-id='payment-deposit-Boleto In']",
+    "value": "//div[@class='transition duration-500 opacity-0 !duration-300 max-h-[95%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] hidden tablet:block overflow-y-auto !opacity-100']//div[@data-test-id='payment-deposit-Boleto In']",
     "type": "xpath"
   },
   {
     "key": "depositBinanceMethod",
-    "value": "//div[@class='transition duration-500 opacity-0 !duration-300 tablet:w-[430px] tablet:rounded-xl max-h-[95%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] hidden tablet:block overflow-y-auto !opacity-100']//div[@data-test-id='payment-deposit-Crypto In']",
+    "value": "//div[@class='transition duration-500 opacity-0 !duration-300 max-h-[95%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] hidden tablet:block overflow-y-auto !opacity-100']//div[@data-test-id='payment-deposit-Crypto In']",
     "type": "xpath"
   },
 
   {
     "key": "depositPagueNaLotericaMethod",
-    "value": "//div[@class='transition duration-500 opacity-0 !duration-300 tablet:w-[430px] tablet:rounded-xl max-h-[95%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] hidden tablet:block overflow-y-auto !opacity-100']//div[@data-test-id='payment-deposit-Lottery In']",
+    "value": "//div[@class='transition duration-500 opacity-0 !duration-300 max-h-[95%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] hidden tablet:block overflow-y-auto !opacity-100']//div[@data-test-id='payment-deposit-Lottery In']",
     "type": "xpath"
   },
   {
     "key": "depositITAUMethod",
-    "value": "//div[@class='transition duration-500 opacity-0 !duration-300 tablet:w-[430px] tablet:rounded-xl max-h-[95%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] hidden tablet:block overflow-y-auto !opacity-100']//div[@data-test-id='payment-deposit-Deposit Express In']",
+    "value": "//div[@class='transition duration-500 opacity-0 !duration-300 max-h-[95%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] hidden tablet:block overflow-y-auto !opacity-100']//div[@data-test-id='payment-deposit-Deposit Express In']",
     "type": "xpath"
   },
   {
@@ -659,7 +663,7 @@
     "type": "xpath"
   },
   {"key": "identityNumber",
-    "value": "/html[1]/body[1]/div[13]/div[1]/div[1]/section[1]/form[1]/div[1]/div[6]/div[1]/input[1]",
+    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/form[1]/div[1]/div[6]/div[1]/input[1]",
     "type": "xpath"
   },
   {
@@ -709,22 +713,22 @@
   },
   {
     "key": "selectWithdrawal",
-    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[2]/button[2]",
+    "value": "//body/div[15]/div[1]/div[1]/section[1]/div[1]/div[2]/button[2]",
     "type": "xpath"
   },
   {
     "key": "pixInWithdrawalMethod",
-    "value": "//body/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[1]/div[1]/button[1]",
+    "value": "//div[@class='transition duration-500 opacity-0 !duration-300 max-h-[95%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] hidden tablet:block overflow-y-auto !opacity-100']//div[@data-test-id='payment-withdrawal-PIX']",
     "type": "xpath"
   },
   {
     "key": "MinAmountWithdrawal",
-    "value": "//body/div[13]/div[1]/div[1]/section[1]/form[1]/div[1]/div[2]/div[1]/span[1]",
+    "value": "//body/div[14]/div[1]/div[1]/section[1]/form[1]/div[1]/div[2]/div[1]/span[1]",
     "type": "xpath"
   },
   {
     "key": "transactionAmountWithdrawal",
-    "value": "/html[1]/body[1]/div[13]/div[1]/div[1]/section[1]/form[1]/div[1]/div[2]/div[1]/div[1]/input[1]",
+    "value": "/html[1]/body[1]/div[15]/div[1]/div[1]/section[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[2]/form[1]/div[1]/div[1]/div[1]/div[1]/input[1]",
     "type": "xpath"
   },
   {
@@ -734,7 +738,7 @@
   },
   {
     "key": "bankTransferInWithdrawalMethod",
-    "value": "//body/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[1]/div[1]/button[2]",
+    "value": "//div[@class='transition duration-500 opacity-0 !duration-300 max-h-[95%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] hidden tablet:block overflow-y-auto !opacity-100']//div[@data-test-id='payment-withdrawal-Bank Transfer']",
     "type": "xpath"
   },
   {
@@ -754,7 +758,7 @@
   },
   {
     "key": "bTAccountTypeInWithdrawal",
-    "value": "/html[1]/body[1]/div[13]/div[1]/div[1]/section[1]/form[1]/div[1]/div[7]/div[1]/div[1]/div[1]/div[1]/input[1]",
+    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/form[1]/div[1]/div[7]/div[1]/div[1]/div[1]/div[1]/input[1]",
     "type": "xpath"
   },
   {
@@ -764,22 +768,22 @@
   },
   {
     "key": "accountNumber",
-    "value": "/html[1]/body[1]/div[13]/div[1]/div[1]/section[1]/form[1]/div[1]/div[8]/div[1]/input[1]",
+    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/form[1]/div[1]/div[8]/div[1]/input[1]",
     "type": "xpath"
   },
   {
     "key": "accountDigitsr",
-    "value": "/html[1]/body[1]/div[13]/div[1]/div[1]/section[1]/form[1]/div[1]/div[9]/div[1]/input[1]",
+    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/form[1]/div[1]/div[9]/div[1]/input[1]",
     "type": "xpath"
   },
   {
     "key": "cryptoOutInWithdrawalMethod",
-    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/div[3]/div[1]/div[1]/div[1]/div[1]/button[3]/div[1]/div[1]/span[1]/img[1]",
+    "value": "//div[@class='transition duration-500 opacity-0 !duration-300 max-h-[95%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] hidden tablet:block overflow-y-auto !opacity-100']//div[@data-test-id='payment-withdrawal-Crypto Out']",
     "type": "xpath"
   },
   {
     "key": "accountNumberCrypto",
-    "value": "/html[1]/body[1]/div[13]/div[1]/div[1]/section[1]/form[1]/div[1]/div[3]/div[1]/input[1]",
+    "value": "/html[1]/body[1]/div[14]/div[1]/div[1]/section[1]/form[1]/div[1]/div[3]/div[1]/input[1]",
     "type": "xpath"
   },
   {
@@ -814,7 +818,7 @@
   },
   {
     "key": "firstTransactionInBookingPage",
-    "value": "//body/div[@id='__next']/div[1]/div[2]/main[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]",
+    "value": "//body/div[@id='__next']/div[1]/div[2]/main[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[3]/div[2]",
     "type": "xpath"
   },
   {
@@ -901,7 +905,7 @@
   },
   {
     "key": "ligaAdminAccounting",
-    "value": "//body/nxt[1]/nxt-layout[1]/nxt-sidebar[1]/div[2]/perfect-scrollbar[1]/div[1]/div[1]/ul[1]/li[10]/a[1]/div[1]/span[1]",
+    "value": "//span[contains(text(),'Accounting')]",
     "type": "xpath"
   },
   {
@@ -918,5 +922,41 @@
     "key": "ligabetAdminTransactionStatus",
     "value": "//div[@class='ng-tns-c348-9 ng-star-inserted']",
     "type": "xpath"
+  },
+  {
+    "key": "ligaAdminWithdrawalRequest",
+    "value": "//span[contains(text(),'Withdrawal requests')]",
+    "type": "xpath"
+  },
+  {
+    "key": "ligaAdminWithdrawalIDField",
+    "value": "//thead/tr[1]/th[1]/nz-table-sorters[1]",
+    "type": "xpath"
+  },
+  {
+    "key": "ligabetAdminWithdrawTransactionList",
+    "value": "//tbody",
+    "type": "xpath"
+  },
+  {
+    "key": "transactionWithdrawalStatus",
+    "value": "//td[6]//div[@class='ng-tns-c332-351 ng-star-inserted']",
+    "type": "xpath"
+  },
+  {
+    "key": "ligaAdminWithdrawalPayOut",
+    "value": "//span[contains(text(),' PAY OUT ')]",
+    "type": "xpath"
+  },
+  {
+    "key": "ligaAdminWithdrawalPayNow",
+    "value": "//span[contains(text(),'Pay now!')]",
+    "type": "xpath"
+  },
+  {
+    "key": "ligaAdminWithdrawalRefreshButton",
+    "value": "//span[contains(text(),'Refresh')]",
+    "type": "xpath"
   }
+
 ]

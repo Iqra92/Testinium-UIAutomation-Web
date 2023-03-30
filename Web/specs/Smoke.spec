@@ -318,8 +318,10 @@ tags:makeDepositWithPagueNaLotericaMethod
 * Login Account For Dev Ligabet Admin
 * Go to Side Menu Bar In Ligabet Admin
 * Go to Accounting in Ligabet Admin
-* Go to Transaction page in Ligabet Admin
-* Check Transaction Status in Dev Ligabet Admin
+* Go to Withdrawal Request in Ligabet Admin
+* Search Particular transaction Withdrawal
+* Find Withdraw transaction then Go to PayOut
+//* Go to Transaction page in Ligabet Admin
 
 
 ## Login Pagsmile Admin
@@ -334,8 +336,8 @@ tags:loginPagsmileAdmin
 * Search Transaction In Listing
 * Check Transaction Status in Pagsmile Admin
 
-## Verify Transactions CallBack In Pagsmile Admin
-tags:verifyTransactionsCallBackInPagsmileAdmin
+## Verify Deposit Transactions CallBack In Pagsmile Admin and Core Admin
+tags:verifyDepositTransactionsCallBackInPagsmileAdminAndCareAdmin
 * Login Account
 * Open My account
 * Choose to Payment Method with "depositPIXMethod"
@@ -367,6 +369,40 @@ tags:verifyTransactionsCallBackInPagsmileAdmin
 * Go to Side Menu Bar In Ligabet Admin
 * Go to Accounting in Ligabet Admin
 * Go to Transaction page in Ligabet Admin
-* Check Transaction Status in Dev Ligabet Admin
+* Check Deposit Transaction Status in Dev Ligabet Admin
+
+## Verify Withdrawal Transactions CallBack In Pagsmile Admin and Core Admin
+tags:verifyWithdrawalTransactionsCallBackInPagsmileAdminAndCoreAdmin
+* Open Test environment
+* Login Account
+* Open My account
+* Open Withdrawal
+* Choose to Payment Method with "pixInWithdrawalMethod"
+//* Genarete Random Withdrawal Value and Enter that value
+//* Select the Key Type and Enter the Key Number
+//* Select the Identity Type and Enter the Identity Number
+* Select Pix Key Type
+* Write value for Pix key and Identity Number
+* Continue To Transaction
+* Verification For Transaction Succesfully
+* Go to Side Menu Bar
+* Go to Transaction History Page
+* Get Transaction Number In Transaction History Page
+* Open new tab
+* Focus on tab number "2"
+* Go to "https://dev-admin.ligabet.com/" address
+* Login Account For Dev Ligabet Admin
+* Go to Side Menu Bar In Ligabet Admin
+* Go to Accounting in Ligabet Admin
+* Go to Withdrawal Request in Ligabet Admin
+* Search Particular transaction Withdrawal
+* Find Withdraw transaction then Go to PayOut
+* Go to Transaction page in Ligabet Admin
+* Check Withdrawal Transaction Status in Dev Ligabet Admin
+//* Check Withdrawal Transaction Status in Dev Ligabet Admin
+
+
+
+
 
 

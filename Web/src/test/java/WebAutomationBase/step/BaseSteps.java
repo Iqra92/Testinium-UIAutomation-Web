@@ -15,6 +15,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.LoggerFactory;
 import org.slf4j.impl.Log4jLoggerAdapter;
@@ -1705,6 +1706,41 @@ public class BaseSteps extends BaseTest {
       }
 
     }
+  }
+
+  @Step({"Find table list by <key> and get value <saveKey> and payout <key> paynow <key>"})
+  public void checkWithdrawFromTableListAndPayout(String tableList,String saveKey,String payOut,String payNow) throws IOException, InterruptedException {
+    WebElement baseTable = findElement(tableList);
+    WebElement transactionPayOut = findElement(payOut);
+
+    List<WebElement> tableRows = baseTable.findElements(By.tagName("tr"));
+    for (int i=0; i<=tableRows.size(); i++) {
+      logger.info("Rows => :"+ tableRows.get(i).getText());
+      if ((tableRows.get(i).getText()).contains(StoreHelper.INSTANCE.getValue(saveKey)) && (tableRows.get(i).getText().contains(transactionPayOut.getText()))) {
+        logger.info("Transaction is Found "+ tableRows.get(i).getText() + "\n" + "Text is going to click: " + transactionPayOut.getText());
+
+        transactionPayOut.click();
+        WebElement transactionPayNow = findElement(payNow);
+        transactionPayNow.click();
+        logger.info("Clicked to:" + transactionPayNow.getText());
+        break;
+      }
+      else {
+
+        logger.info("Transaction Not Found");
+      }
+    }
+  }
+
+  public void explicitwait(){
+    // Create an instance of WebDriverWait
+    WebDriverWait wait = new WebDriverWait(driver, 10);
+
+// Wait until the element is visible
+    wait.until(ExpectedConditions.titleIs(SUCCESS_STATUS));
+
+
+
   }
 
 

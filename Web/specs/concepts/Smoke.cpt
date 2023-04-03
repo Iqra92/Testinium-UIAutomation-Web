@@ -35,11 +35,18 @@ This is a concept file with following syntax for each concept.
 * Click to element "loginButtonArea"
 * Wait "2" seconds
 
-# Login Pagsmile Admin
+# Login Deposit Pagsmile Admin
 * Wait for element to load with key "loginPagsmileEmail"
 * Write value "legal@texsportbet.com" to element "loginPagsmileEmail"
 * Write value "Moskv@reka00" to element "loginPagsmilePassword"
 * Wait for element then click "loginPagsmile"
+
+# Login Withdrawal Pagsmile Admin
+* Wait for element then click "emailButtonWithdrawPagsmile"
+* Wait for element to load with key "loginWithdrawPagsmileEmail"
+* Write value "legal@texsportbet.com" to element "loginWithdrawPagsmileEmail"
+* Write value "Moskv@reka00" to element "loginWithdrawPagsmilePassword"
+* Wait for element then click "loginWithdrawPagsmile"
 
 # Register Page Open
 * Click to element "registerButton"
@@ -636,7 +643,10 @@ This is a concept file with following syntax for each concept.
 * Find table list by "pagsmileTransactionList" and search transaction "transactionNumber" and click trans ID "pagsmileTransactionID"
 
 # Check Transaction Status in Pagsmile Admin
-* Find table list by "pagsmileTransactionList" and check transaction status "pagsmileTransactionStatus" and store value "transactionNumber"
+* Wait "5" seconds
+* Find table list by "pagsmileTransactionList" and check transaction status and refresh the peage for getting status "ligaAdminDepositRefreshButton"
+
+//* Find table list by "pagsmileTransactionList" and check transaction status "pagsmileTransactionStatus" and store value "transactionNumber"
 
 # Go to Fill Order For Select Status
 * Wait for element then click "fillOrderButton"
@@ -671,7 +681,7 @@ This is a concept file with following syntax for each concept.
 # Check Deposit Transaction Status in Dev Ligabet Admin
 * Refresh page
 * Wait "5" seconds
-* Find table list by "ligabetAdminTransactionList" and get value "transactionNumber" then check status
+* Find table list by "ligabetAdminTransactionList" and check transaction status and refresh the peage for getting status "ligaAdminDepositRefreshButton"
 
 # Go to Withdrawal Request in Ligabet Admin
 * Wait for element then click "ligaAdminWithdrawalRequest"
@@ -688,8 +698,10 @@ This is a concept file with following syntax for each concept.
 * Wait "5" seconds
 * Wait for element then click "ligaAdminWithdrawalRefreshButton"
 * Wait "5" seconds
+* Find table list by "ligabetAdminTransactionList" and check transaction status and refresh the peage for getting status "ligaAdminDepositRefreshButton"
+
 //* Find table list by "ligabetAdminWithdrawTransactionList" and get value "transactionNumberWithdrawal" then check status
-* Find table list by "ligabetAdminWithdrawTransactionList" and check transaction status "transactionWithdrawalStatus" and store value "transactionNumberWithdrawal"
+//* Find table list by "ligabetAdminWithdrawTransactionList" and check transaction status "transactionStatusAdminPanel" and store value "transactionNumberWithdrawal"
 
 
 # Find Withdraw transaction then Go to PayOut

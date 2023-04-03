@@ -939,8 +939,8 @@
     "type": "xpath"
   },
   {
-    "key": "transactionWithdrawalStatus",
-    "value": "//td[6]//div[@class='ng-tns-c332-351 ng-star-inserted']",
+    "key": "transactionStatusAdminPanel",
+    "value": "//td[6]//div[@class='ng-tns-c332-3 ng-star-inserted']",
     "type": "xpath"
   },
   {
@@ -957,6 +957,32 @@
     "key": "ligaAdminWithdrawalRefreshButton",
     "value": "//span[contains(text(),'Refresh')]",
     "type": "xpath"
+  },
+  {
+    "key": "emailButtonWithdrawPagsmile",
+    "value": "#__BVID__48___BV_tab_button__",
+    "type": "css"
+  },
+  {
+    "key": "loginWithdrawPagsmileEmail",
+    "value": "//input[@id='login-email']",
+    "type": "xpath"
+  },
+  {
+    "key": "loginWithdrawPagsmilePassword",
+    "value": "//input[@id='login-password']",
+    "type": "xpath"
+  },
+  {
+    "key": "loginWithdrawPagsmile",
+    "value": "//button[contains(text(),'Login')]",
+    "type": "xpath"
+  },
+  {
+    "key": "ligaAdminDepositRefreshButton",
+    "value": "//span[contains(text(),'Refresh')]",
+    "type": "xpath"
   }
+
 
 ]

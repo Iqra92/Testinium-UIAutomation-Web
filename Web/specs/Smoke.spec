@@ -318,23 +318,24 @@ tags:makeDepositWithPagueNaLotericaMethod
 * Login Account For Dev Ligabet Admin
 * Go to Side Menu Bar In Ligabet Admin
 * Go to Accounting in Ligabet Admin
-* Go to Withdrawal Request in Ligabet Admin
-* Search Particular transaction Withdrawal
-* Find Withdraw transaction then Go to PayOut
-//* Go to Transaction page in Ligabet Admin
+* Go to Transaction page in Ligabet Admin
+* Check Deposit Transaction Status in Dev Ligabet Admin
+
+## Login Withdrawal Pagsmile Admin
+tags:loginPagsmileAdmin
+* Open new tab
+* Focus on tab number "2"
+* Go to "https://dashboard-sandbox.transfersmile.com/login" address
+* Login Withdrawal Pagsmile Admin
 
 
-## Login Pagsmile Admin
+## Login Deposit Pagsmile Admin
 tags:loginPagsmileAdmin
 * Open new tab
 * Focus on tab number "2"
 * Go to "https://dashboard-test.pagsmile.com/" address
-* Login Pagsmile Admin
-* Search Transaction In Listing
-* Check Transaction number in Pagsmile Admin
-* Go to Fill Order For Select Status
-* Search Transaction In Listing
-* Check Transaction Status in Pagsmile Admin
+* Login Deposit Pagsmile Admin
+
 
 ## Verify Deposit Transactions CallBack In Pagsmile Admin and Core Admin
 tags:verifyDepositTransactionsCallBackInPagsmileAdminAndCareAdmin
@@ -356,7 +357,7 @@ tags:verifyDepositTransactionsCallBackInPagsmileAdminAndCareAdmin
 * Open new tab
 * Focus on tab number "2"
 * Go to "https://dashboard-test.pagsmile.com/" address
-* Login Pagsmile Admin
+* Login Deposit Pagsmile Admin
 * Search Transaction In Listing
 * Check Transaction number in Pagsmile Admin
 * Go to Fill Order For Select Status
@@ -399,7 +400,8 @@ tags:verifyWithdrawalTransactionsCallBackInPagsmileAdminAndCoreAdmin
 * Find Withdraw transaction then Go to PayOut
 * Go to Transaction page in Ligabet Admin
 * Check Withdrawal Transaction Status in Dev Ligabet Admin
-//* Check Withdrawal Transaction Status in Dev Ligabet Admin
+
+
 
 
 

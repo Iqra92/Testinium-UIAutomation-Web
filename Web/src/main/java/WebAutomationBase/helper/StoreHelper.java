@@ -33,7 +33,8 @@ public enum StoreHelper
             initMap(getFileList(currentWorkingDir + "/src"));
         }
         catch (Exception ex) {
-            System.out.println(ex + " json dosyalarını ararken hata oluştu.");
+            System.out.println(ex + " \n" +
+                    "Error while searching json files.");
         }
         // initMap(readJsonFile());
     }

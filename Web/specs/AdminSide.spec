@@ -5,8 +5,6 @@ Created by sahabt on 4/04/2023
 This is an executable specification file which follows markdown syntax.
 Every heading in this file denotes a scenario. Every bulleted point denotes a step.
      
-Scenario Heading
-----------------
 
 ## Login Dev Ligabet Admin
 * Open new tab

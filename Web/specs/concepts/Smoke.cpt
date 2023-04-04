@@ -594,7 +594,7 @@ This is a concept file with following syntax for each concept.
 # Compare the transactions numbers from pagsmile Page to Website page
 * Wait "5" seconds
 ///* Compare saved key "transactionNumber" contains the other saved key "firstTransactionInBookingPage" of element
-* Find element by "firstTransactionInBookingPage" and compare saved key "transactionNumber" contains the text of element
+* Find element by "depositTransactionInBookingPage" and compare saved key "transactionNumber" contains the text of element
 
 # Select the Card and Enter the Missing Number
 * Wait for element then click "cardInWithdrawalPage"
@@ -634,7 +634,7 @@ This is a concept file with following syntax for each concept.
 # Search Transaction In Listing
 * Wait "15" seconds
 * Wait for element then click "searchButtonPagsmile"
-* Wait "10" seconds
+* Wait "5" seconds
 
 
 # Check Transaction number in Pagsmile Admin
@@ -644,8 +644,7 @@ This is a concept file with following syntax for each concept.
 
 # Check Transaction Status in Pagsmile Admin
 * Wait "5" seconds
-* Find table list by "pagsmileTransactionList" and check transaction status and refresh the peage for getting status "ligaAdminDepositRefreshButton"
-
+* Find table list by "pagsmileTransactionList" and check transaction status and refresh the page for getting status "searchButtonPagsmile" and get value "transactionNumber"
 //* Find table list by "pagsmileTransactionList" and check transaction status "pagsmileTransactionStatus" and store value "transactionNumber"
 
 # Go to Fill Order For Select Status
@@ -681,7 +680,7 @@ This is a concept file with following syntax for each concept.
 # Check Deposit Transaction Status in Dev Ligabet Admin
 * Refresh page
 * Wait "5" seconds
-* Find table list by "ligabetAdminTransactionList" and check transaction status and refresh the peage for getting status "ligaAdminDepositRefreshButton"
+* Find table list by "ligabetAdminTransactionList" and check transaction status and refresh the page for getting status "ligaAdminDepositRefreshButton" and get value "transactionNumber"
 
 # Go to Withdrawal Request in Ligabet Admin
 * Wait for element then click "ligaAdminWithdrawalRequest"
@@ -698,10 +697,7 @@ This is a concept file with following syntax for each concept.
 * Wait "5" seconds
 * Wait for element then click "ligaAdminWithdrawalRefreshButton"
 * Wait "5" seconds
-* Find table list by "ligabetAdminTransactionList" and check transaction status and refresh the peage for getting status "ligaAdminDepositRefreshButton"
-
-//* Find table list by "ligabetAdminWithdrawTransactionList" and get value "transactionNumberWithdrawal" then check status
-//* Find table list by "ligabetAdminWithdrawTransactionList" and check transaction status "transactionStatusAdminPanel" and store value "transactionNumberWithdrawal"
+* Find table list by "ligabetAdminTransactionList" and check transaction status and refresh the page for getting status "ligaAdminDepositRefreshButton" and get value "transactionNumberWithdrawal"
 
 
 # Find Withdraw transaction then Go to PayOut

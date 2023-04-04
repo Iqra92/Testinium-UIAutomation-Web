@@ -1615,15 +1615,15 @@ public class BaseSteps extends BaseTest {
 
         String t1 = getElementText(key).trim();
         String t2 = StoreHelper.INSTANCE.getValue(saveKey).trim();
-        if (t1.equalsIgnoreCase(t2)) {
-            logger.info("Compared Transaction Successfully => " + getElementText(key));
+        if (t1.contains(t2)) {
+            logger.info("Compared Transaction Successfully => ");
 
             Assert.assertTrue("Done Successful", true);
 
         } else {
-            logger.info("Compared Transaction Failed => " + getElementText(key));
+            logger.info("Compared Transaction Failed => ");
 
-            Assert.assertTrue("Done Failed", false);
+            Assert.assertTrue("Compared Failed", false);
 
         }
     }
@@ -1646,27 +1646,27 @@ public class BaseSteps extends BaseTest {
         }
     }
 
-//  @Step({"Find table list by <key> and check transaction status <key> and store value <saveKey>"})
-//  public void checkStatusFromTable(String key,String status,String saveKey) throws IOException {
-//    WebElement baseTable = findElement(key);
-//    WebElement transactionStatus = findElement(status);
-//
-//    List<WebElement> tableRows = baseTable.findElements(By.tagName("tr"));
-//    for (int i=0; i<=tableRows.size(); i++) {
-//      logger.info("Rows => :"+ tableRows.get(i).getText());
-//      if ((tableRows.get(i).getText()).contains(TRANSACTION_NUMBER) && (tableRows.get(i).getText().contains(transactionStatus.getText()))) {
-//          logger.info("Transaction is Found "+ tableRows.get(i).getText() + "\n" + "Status is: " + transactionStatus.getText());
-//          break;
-//        }
-//        else {
-//
-//          logger.info("Transaction is not in Success Status");
-//        }
-//    }
-//  }
+  @Step({"Find table list by <key> and check transaction status <key> and store value <saveKey>"})
+  public void checkingStatusFromPagsmile(String key,String status,String saveKey) throws IOException {
+    WebElement baseTable = findElement(key);
+    WebElement transactionStatus = findElement(status);
 
-    @Step({"Find table list by <key> and check transaction status and refresh the peage for getting status <refresh>"})
-    public void checkStatusFromTable(String key, String refresh) throws IOException {
+    List<WebElement> tableRows = baseTable.findElements(By.tagName("tr"));
+    for (int i=0; i<=tableRows.size(); i++) {
+      logger.info("Rows => :"+ tableRows.get(i).getText());
+      if ((tableRows.get(i).getText()).contains(StoreHelper.INSTANCE.getValue(saveKey)) && (tableRows.get(i).getText().contains(transactionStatus.getText()))) {
+          logger.info("Transaction is Found "+ StoreHelper.INSTANCE.getValue(saveKey) + "\n" + "Status is: " + transactionStatus.getText());
+          break;
+        }
+        else {
+
+          logger.info("Transaction is not in Success Status");
+        }
+    }
+  }
+
+    @Step({"Find table list by <key> and check transaction status and refresh the page for getting status <refresh> and get value <saveKey>"})
+    public void checkingStatusFromAdmin(String key, String refresh, String saveKey) throws IOException {
         WebElement baseTable = findElement(key);
         //       WebElement transactionStatus = findElement(status);
 
@@ -1676,9 +1676,9 @@ public class BaseSteps extends BaseTest {
             logger.info("Rows => :" + tableRows.get(i).getText());
          //   logger.info("Checking status:" + transactionStatus.getText());
 
-            if (tableRows.get(i).getText().contains(TRANSACTION_NUMBER)) {
+            if ((tableRows.get(i).getText()).contains(StoreHelper.INSTANCE.getValue(saveKey))) {
 
-                logger.info("Transaction is Found:" + TRANSACTION_NUMBER);
+                logger.info("Transaction is Found:" + StoreHelper.INSTANCE.getValue(saveKey));
 
                 while (true) {  // true
                     WebElement baseTable1 = findElement(key);
@@ -1687,7 +1687,7 @@ public class BaseSteps extends BaseTest {
 //                    String value = String.valueOf(transactionStatus.getText().equals(SUCCESS_STATUS));
                     List<WebElement> tableRows1 = baseTable1.findElements(By.tagName("tr"));
 
-                    if (tableRows1.get(i).getText().contains(SUCCESS_STATUS)){
+                    if ((tableRows1.get(i).getText()).contains(SUCCESS_STATUS_PAGSMILE)){
                         logger.info( "Status is Successfully:" );
                         // status trans == success status break
                         break;

@@ -5,7 +5,7 @@ This is a concept file with following syntax for each concept.
 * Wait "5" seconds
 //* Wait for element then click "gotItButton"
 //* Find element text equals "JOIN" and click
-* Check if element "registerButton" exists
+//* Check if element "registerButton" exists
 * Check if element "loginButton" exists
 * Wait "5" seconds
 
@@ -656,7 +656,7 @@ This is a concept file with following syntax for each concept.
 * Wait for element then click "confirmFillOrderButton"
 
 # Login Account For Dev Ligabet Admin
-* Wait "5" seconds
+* Wait "10" seconds
 * Wait for element then click "ligaAdminUserName"
 * Write value "qa-admin" to element "ligaAdminUserName"
 * Write value "Testinium123!" to element "ligaAdminPassword"

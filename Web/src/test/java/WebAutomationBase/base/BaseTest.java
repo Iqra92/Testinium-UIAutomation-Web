@@ -34,7 +34,7 @@ import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
-  public static final String MOB_HEADER = "C:\\Users\\sahabt\\node_modules\\chrome-modheader\\modheader.crx";
+  public static final String MOB_HEADER = "./src/chrome-modheader/modheader.crx";
 
   public static final String ADD_HEADERS_CLOUDFLARE = "https://webdriver.modheader.com/add?cf-access-client-id=ecc777a18e7a511f683db6fde508c6f1.access&cf-access-client-secret=58956fd1b52c3b436ac2ac8bea82af5586b76d878b465f7390aa7a2a30ca8503";
   protected static WebDriver driver;
@@ -61,6 +61,7 @@ public class BaseTest {
     if (StringUtils.isEmpty(System.getenv("key"))) {
       if ("win".equalsIgnoreCase(selectPlatform)) {
         if ("chrome".equalsIgnoreCase(selectBrowser)) {
+
 
           Path currentRelativePath = Paths.get(MOB_HEADER);
           ChromeOptions options = new ChromeOptions();
